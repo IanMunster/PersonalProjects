@@ -50,8 +50,7 @@ public class Player : Character {
 		// Story the input
 		direction.y = Input.GetAxisRaw ("Vertical");
 		direction.x = Input.GetAxisRaw ("Horizontal");
-		// Normalize to remove diagonally move bonus
-		direction.Normalize ();
+
 
 		/// Debug
 		/// 
@@ -66,33 +65,38 @@ public class Player : Character {
 		///
 		/// End Debug
 	}
-}
 
 
+	/// Testing
+	/// 
+	private float attackWaitSecond = 3f; 
 
+	private IEnumerator Attack () {
 
+		//
+		yield return new WaitForSeconds (attackWaitSecond);
 
+		//
 
+	}
 
+	// Values for Long Idle Animation
+	[SerializeField] private float waitLongMax = 600f;
+	private float waitLong;
 
-
-
-// Values for Long Idle Animation
-//[SerializeField] private float waitLongMax = 600f;
-//private float waitLong;
-/*
-	 // Function to Override Character Animate? And Play Long Idle Animation
-protected override void AnimateMovement () {
-	base.AnimateMovement ();
-	//
-	if (direction == Vector2.zero) {
-		waitLong++;
-		if (waitLong == waitLongMax) {
-			//.SetTrigger ("LongIdle");
+	// Function to Override Character Animate? And Play Long Idle Animation
+	protected override void AnimateMovement () {
+		base.AnimateMovement ();
+		//
+		if (direction == Vector2.zero) {
+			waitLong++;
+			if (waitLong == waitLongMax) {
+				anim.SetTrigger ("LongIdle");
+				waitLong = 0;
+			}
+		} else {
 			waitLong = 0;
 		}
-	} else {
-		waitLong = 0;
 	}
+	/// End Testing
 }
-*/
