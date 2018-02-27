@@ -47,13 +47,13 @@ public class Player : Character {
 
 	// Function to get Input
 	private void GetInput () {
-		// Story the input
+		// Store the input
 		direction.y = Input.GetAxisRaw ("Vertical");
 		direction.x = Input.GetAxisRaw ("Horizontal");
 
 
-		/// Debug
-		/// 
+/// Debug & Testing
+///
 		if (Input.GetKeyDown(KeyCode.I)) {
 			health.MyCurrentValue += 10;
 			mana.MyCurrentValue += 20;
@@ -62,41 +62,52 @@ public class Player : Character {
 			health.MyCurrentValue -= 10;
 			mana.MyCurrentValue -= 20;
 		}
-		///
-		/// End Debug
-	}
 
-
-	/// Testing
-	/// 
-	private float attackWaitSecond = 3f; 
-
-	private IEnumerator Attack () {
-
-		//
-		yield return new WaitForSeconds (attackWaitSecond);
-
-		//
-
-	}
-
-	// Values for Long Idle Animation
-	[SerializeField] private float waitLongMax = 600f;
-	private float waitLong;
-
-	// Function to Override Character Animate? And Play Long Idle Animation
-	protected override void AnimateMovement () {
-		base.AnimateMovement ();
-		//
-		if (direction == Vector2.zero) {
-			waitLong++;
-			if (waitLong == waitLongMax) {
-				anim.SetTrigger ("LongIdle");
-				waitLong = 0;
-			}
-		} else {
-			waitLong = 0;
+		if (Input.GetKeyDown (KeyCode.Space) && !IsMoving && !isAttacking) {
+			attackRoutine = StartCoroutine (Attack());
 		}
 	}
-	/// End Testing
+
+	// Second to wait for AttackAnimation
+	private float attackWaitSecond = 5f; 
+
+	// Test function to Attack
+	private IEnumerator Attack () {
+		if (!isAttacking && !IsMoving) {
+			//
+			isAttacking = true;
+			//
+			anim.SetBool ("Attack", isAttacking);
+			//
+			yield return new WaitForSeconds (attackWaitSecond);
+			//
+			StopAttack ();
+		}
+
+	}
+///
+/// End Testing & Debug
 }
+
+
+
+/*
+// Values for Long Idle Animation
+[SerializeField] private float waitLongMax = 600f;
+private float waitLong;
+
+// Function to Override Character Animate? And Play Long Idle Animation
+protected override void AnimateMovement () {
+	base.AnimateMovement ();
+	//
+	if (direction == Vector2.zero) {
+		waitLong++;
+		if (waitLong == waitLongMax) {
+			anim.SetTrigger ("LongIdle");
+			waitLong = 0;
+		}
+	} else {
+		waitLong = 0;
+	}
+}
+*/

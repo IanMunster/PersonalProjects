@@ -18,6 +18,10 @@ public abstract class Character : MonoBehaviour {
 	// Animator Component for Movement
 	protected Animator anim;
 
+	protected Coroutine attackRoutine;
+	// Bool to check if Attacking
+	protected bool isAttacking = false;
+
 	// Rigidbody Component for Movement
 	private Rigidbody2D rigid;
 
@@ -33,7 +37,7 @@ public abstract class Character : MonoBehaviour {
 	// Update is called once per frame
 	protected virtual void Update () {
 		// Call the Animator Function
-		AnimateMovement ();
+		HandleLayers ();
 	}
 
 
@@ -57,14 +61,6 @@ public abstract class Character : MonoBehaviour {
 		rigid.velocity = direction.normalized * speed;
 	}
 
-
-	//Function to Animate the Movement
-	protected virtual void AnimateMovement () {
-		anim.SetFloat("DirX", direction.x);
-		anim.SetFloat ("DirY", direction.y);
-	}
-
-
 	// Function to Disable and Enable correct Layers
 	public void ActivateLayer (string layerName) {
 		// Go through all Layers in Animator
@@ -78,6 +74,28 @@ public abstract class Character : MonoBehaviour {
 
 
 	public void HandleLayers () {
-		
+		if (IsMoving) {
+			StopAttack ();
+
+			anim.SetFloat("DirX", direction.x);
+			anim.SetFloat ("DirY", direction.y);
+			ActivateLayer ("MovementLayer");
+		}
+		else if (isAttacking) {
+			ActivateLayer ("AttackLayer");
+		} else {
+			ActivateLayer ("IdleLayer");
+		}
+	}
+
+	//
+	public void StopAttack () {
+		if (attackRoutine != null) {
+			StopCoroutine (attackRoutine);
+			//
+			isAttacking = false;
+			//
+			anim.SetBool ("Attack", isAttacking);
+		}
 	}
 }
