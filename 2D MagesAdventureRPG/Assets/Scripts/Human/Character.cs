@@ -29,7 +29,7 @@ public abstract class Character : MonoBehaviour {
 	// Use this for initialization (beforeStart)
 	protected virtual void Awake () {
 		// Find Components
-		anim = GetComponent <Animator> ();
+		anim = GetComponentInChildren <Animator> ();
 		rigid = GetComponent <Rigidbody2D> ();
 	}
 
