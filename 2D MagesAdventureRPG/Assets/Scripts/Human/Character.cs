@@ -7,27 +7,37 @@ using UnityEngine;
 /// 
 /// </summary>
 
+[RequireComponent (typeof(Rigidbody2D))]
 public abstract class Character : MonoBehaviour {
 
+	//
+	[SerializeField] protected Stat health;
+	// Initial value of Health
+	[SerializeField] private float initHealthValue;
 
 	// Movement speed
 	[SerializeField] private float speed;
+	// Rigidbody Component for Movement
+	private Rigidbody2D rigid;
+
 
 	// Direction of Movement
 	protected Vector2 direction;
 	// Animator Component for Movement
 	protected Animator anim;
-
+	//
 	protected Coroutine attackRoutine;
 	// Bool to check if Attacking
 	protected bool isAttacking = false;
+	//
+	[SerializeField] protected Transform hitBox;
 
-	// Rigidbody Component for Movement
-	private Rigidbody2D rigid;
 
 
 	// Use this for initialization (beforeStart)
 	protected virtual void Awake () {
+
+		health.Initialize (initHealthValue, initHealthValue);
 		// Find Components
 		anim = GetComponentInChildren <Animator> ();
 		rigid = GetComponent <Rigidbody2D> ();
@@ -89,13 +99,24 @@ public abstract class Character : MonoBehaviour {
 	}
 
 	//
-	public void StopAttack () {
+	public virtual void StopAttack () {
 		if (attackRoutine != null) {
 			StopCoroutine (attackRoutine);
 			//
 			isAttacking = false;
 			//
 			anim.SetBool ("Attack", isAttacking);
+		}
+	}
+
+
+	//
+	public virtual void TakeDamage (float damage) {
+		//
+		health.MyCurrentValue -= damage;
+
+		if (health.MyCurrentValue <= 0) {
+			//Die
 		}
 	}
 }

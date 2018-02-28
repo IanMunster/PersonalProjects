@@ -73,8 +73,10 @@ public class Stat : MonoBehaviour {
 			slider.value = currentValue;
 		}
 
-		// Set UI TextValue
-		valueText.text = currentValue + " / " + maxValue;
+		if (valueText != null) {
+			// Set UI TextValue
+			valueText.text = currentValue + " / " + maxValue;
+		}
 
 		// Check if Max has Changed
 		if (maxValue != slider.maxValue) {

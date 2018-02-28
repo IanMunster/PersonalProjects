@@ -13,6 +13,7 @@ public class GameDirector : MonoBehaviour {
 	//
 	[SerializeField] private Player player;
 
+	private NPC currentTarget;
 
 	// Use this for initialization
 	void Start () {
@@ -29,16 +30,29 @@ public class GameDirector : MonoBehaviour {
 	private void ClickOnTarget () {
 		//
 		if (Input.GetKeyDown(KeyCode.Mouse0) && !EventSystem.current.IsPointerOverGameObject()) {
+
+			//Raycast to MouseClick
 			RaycastHit2D hit = Physics2D.Raycast (Camera.main.ScreenToWorldPoint (Input.mousePosition), Vector2.zero, Mathf.Infinity, LayerMask.GetMask ("Clickable"));
+
 			//
 			if (hit.collider != null) {
 				//
-				if (hit.collider.tag == "Enemy") {
-					player.Target = hit.transform.GetChild(1);
+				if (currentTarget != null) {
+					//
+					currentTarget.Deselect ();
 				}
+				//
+				currentTarget = hit.collider.GetComponent <NPC> ();
+				//
+				player.Target = currentTarget.Select ();
 
 			} else {
-				// detarget
+
+				//
+				if (currentTarget != null) {
+					currentTarget.Deselect ();
+				}
+				currentTarget = null;
 				player.Target = null;
 			}
 		} 

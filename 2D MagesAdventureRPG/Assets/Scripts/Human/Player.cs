@@ -9,31 +9,19 @@ using UnityEngine;
 
 public class Player : Character {
 
-
-
-	// StatClass, Health of Player
-	[SerializeField] private Stat health;
 	// StatClass, Mana of Player
 	[SerializeField] private Stat mana;
 
-
-	// Current value of Health
-	private float healthValue = 100f;
-	// Max value of Health
-	/*[SerializeField]*/ private float maxHealth = 100f;
-
-	// Current value of Mana
-	private float manaValue = 100f;
-	// Max value of Mana
-	private float maxMana = 200f;
-
-	// Spells objects
-	[SerializeField] private GameObject[] spellPrefabs;
+	// Initial value of Mana
+	private float initManaValue = 100f;
+	//
+	private SpellBook spellBook;
 	//
 	[SerializeField] private Transform[] staffGems;
 	//
 	private int gemIndex;
-
+	//
+	[SerializeField] private SightBlock[] sightblocks;
 
 	//
 	public Transform Target {
@@ -41,15 +29,12 @@ public class Player : Character {
 		set;
 	}
 
-	//
-	[SerializeField] private SightBlock[] sightblocks;
-
 
 	// Use this for initialization (Before Start)
 	protected override void Awake () {
 		
-		health.Initialize (healthValue, maxHealth);
-		mana.Initialize (manaValue, maxMana);
+		spellBook = GetComponent <SpellBook> ();
+		mana.Initialize (initManaValue, initManaValue);
 
 		base.Awake ();
 	}
@@ -80,8 +65,6 @@ public class Player : Character {
 			gemIndex = 2;
 		}
 
-/// Debug & Testing
-///
 		if (Input.GetKeyDown(KeyCode.I)) {
 			health.MyCurrentValue += 10;
 			mana.MyCurrentValue += 20;
@@ -93,30 +76,28 @@ public class Player : Character {
 	}
 
 
-	// Second to wait for AttackAnimation
-	private float attackWaitSecond = 2.5f; 
-
-
 	// Test function to Attack
 	private IEnumerator Attack (int spellIndex) {
 
+		//
+		Transform currentTarget = Target;
+		// 
+		Spell spell = spellBook.CastSpell (spellIndex);
+		//
+		isAttacking = true;
+		//
+		anim.SetBool ("Attack", isAttacking);
 
+		yield return new WaitForSeconds (spell.GetCastTime);
 
-		if (!isAttacking && !IsMoving) {
+		if (currentTarget != null && InLineOfSight () ) {
 			//
-			isAttacking = true;
+			SpellScript spellScript = Instantiate (spell.GetSpellPrefab, staffGems[gemIndex].position, Quaternion.identity).GetComponent<SpellScript> ();
 			//
-			anim.SetBool ("Attack", isAttacking);
-			//
-			Spell spell = Instantiate (spellPrefabs [spellIndex], staffGems[gemIndex].position, Quaternion.identity).GetComponent<Spell> ();
-
-			spell.Target = Target;
-			//
-			yield return new WaitForSeconds (attackWaitSecond);
-			//
-			StopAttack ();
-
+			spellScript.Initialize (currentTarget, spell.GetDmg);
 		}
+		//
+		StopAttack ();
 
 	}
 
@@ -135,12 +116,16 @@ public class Player : Character {
 
 	//
 	private bool InLineOfSight () {
-		Vector3 targetDirection = (Target.position - transform.position).normalized;
+		
+		if (Target != null) {
+			
+			Vector3 targetDirection = (Target.position - transform.position).normalized;
 
-		RaycastHit2D hit = Physics2D.Raycast (transform.position, targetDirection, Vector2.Distance(transform.position, Target.position), LayerMask.GetMask("SightBlock"));
+			RaycastHit2D hit = Physics2D.Raycast (transform.position, targetDirection, Vector2.Distance(transform.position, Target.position), LayerMask.GetMask("SightBlock"));
 
-		if (hit.collider == null) {
-			return true;
+			if (hit.collider == null) {
+				return true;
+			}
 		}
 
 		//
@@ -157,6 +142,12 @@ public class Player : Character {
 		sightblocks [gemIndex].Activate ();
 	}
 
-///
-/// End Testing & Debug
+
+	public override void StopAttack () {
+
+		spellBook.StopCasting ();
+
+		base.StopAttack ();
+
+	}
 }
