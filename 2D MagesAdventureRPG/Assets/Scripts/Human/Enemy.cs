@@ -10,7 +10,8 @@ using UnityEngine;
 public class Enemy : NPC {
 
 	//
-	[SerializeField] private CanvasGroup healthGroup;
+	[SerializeField]
+	private CanvasGroup healthGroup;
 
 
 	//
@@ -30,4 +31,13 @@ public class Enemy : NPC {
 		base.Deselect ();
 	}
 
+
+	//
+	public override void TakeDamage (float damage) {
+		//
+		base.TakeDamage (damage);
+
+		//
+		OnHealthChanged (health.MyCurrentValue);
+	}
 }

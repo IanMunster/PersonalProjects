@@ -11,12 +11,23 @@ using UnityEngine;
 public abstract class Character : MonoBehaviour {
 
 	//
-	[SerializeField] protected Stat health;
+	[SerializeField]
+	protected Stat health;
+	//
+	public Stat GetHealthStat {
+		get {
+			return health;
+		}
+	}
+
+
 	// Initial value of Health
-	[SerializeField] private float initHealthValue;
+	[SerializeField]
+	private float initHealthValue;
 
 	// Movement speed
-	[SerializeField] private float speed;
+	[SerializeField]
+	private float speed;
 	// Rigidbody Component for Movement
 	private Rigidbody2D rigid;
 
@@ -30,7 +41,8 @@ public abstract class Character : MonoBehaviour {
 	// Bool to check if Attacking
 	protected bool isAttacking = false;
 	//
-	[SerializeField] protected Transform hitBox;
+	[SerializeField]
+	protected Transform hitBox;
 
 
 
@@ -117,6 +129,7 @@ public abstract class Character : MonoBehaviour {
 
 		if (health.MyCurrentValue <= 0) {
 			//Die
+			anim.SetTrigger("Die");
 		}
 	}
 }

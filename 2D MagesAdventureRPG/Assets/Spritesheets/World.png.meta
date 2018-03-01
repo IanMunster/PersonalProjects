@@ -4,38 +4,38 @@ timeCreated: 1519660270
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: World_0
-    21300002: World_1
-    21300004: World_2
-    21300006: World_3
-    21300008: World_4
-    21300010: World_5
-    21300012: World_6
-    21300014: World_7
-    21300016: World_8
-    21300018: World_9
-    21300020: World_10
-    21300022: World_11
-    21300024: World_12
-    21300026: World_13
-    21300028: World_14
-    21300030: World_15
-    21300032: World_16
-    21300034: World_17
-    21300036: World_18
-    21300038: World_19
-    21300040: World_20
-    21300042: World_21
-    21300044: World_22
-    21300046: World_23
-    21300048: World_24
-    21300050: World_25
-    21300052: World_26
-    21300054: World_27
-    21300056: World_28
-    21300058: World_29
-    21300060: World_30
-    21300062: World_31
+    21300000: Obj_wallLow
+    21300002: Obj_FenceMid
+    21300004: Obj_FenceEnd
+    21300006: Obj_Tree1
+    21300008: Obj_Bush1
+    21300010: Obj_WallHigh
+    21300012: Obj_DoorClosed
+    21300014: Obj_DoorOpen
+    21300016: Obj_Window
+    21300018: Obj_WallHighSide
+    21300020: Obj_wallLowSide
+    21300022: Obj_Stair
+    21300024: T_Stair
+    21300026: T_sand
+    21300028: T_GrassPlain
+    21300030: T_WaterPlain
+    21300032: T_StonePlain
+    21300034: T_WoodPlain
+    21300036: T_Desert
+    21300038: T_Grass1
+    21300040: T_Grass2
+    21300042: T_WaterMid
+    21300044: T_Wood
+    21300046: T_Road
+    21300048: T_RoadEdgeV
+    21300050: T_RoadEdgeH
+    21300052: T_RoadEdgeC
+    21300054: T_WaterEdgeWoodH
+    21300056: T_WaterEdgeWoodC
+    21300058: T_WaterEdgeC
+    21300060: T_WaterEdge1
+    21300062: T_WaterEdge2
     21300064: World_32
     21300066: World_33
     21300068: World_34
@@ -236,7 +236,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: World_0
+      name: Obj_wallLow
       rect:
         serializedVersion: 2
         x: 0
@@ -247,10 +247,16 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -62, y: 32}
+        - {x: -77, y: 17}
+        - {x: -77, y: -32}
+        - {x: 65, y: -32}
+        - {x: 77, y: -20}
+        - {x: 77, y: 32}
       tessellationDetail: 0
     - serializedVersion: 2
-      name: World_1
+      name: Obj_FenceMid
       rect:
         serializedVersion: 2
         x: 197
@@ -261,10 +267,29 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -52.5, y: 23.5}
+        - {x: -76.5, y: 14.5}
+        - {x: -76.5, y: -46.5}
+        - {x: -57.5, y: -59.5}
+        - {x: 74.5, y: -59.5}
+        - {x: 76.5, y: -58.5}
+        - {x: 76.5, y: 23.5}
+      - - {x: -33.5, y: -17.5}
+        - {x: -11.5, y: -17.5}
+        - {x: -11.5, y: -24.5}
+        - {x: -33.5, y: -24.5}
+      - - {x: 11.5, y: -17.5}
+        - {x: 33.5, y: -17.5}
+        - {x: 33.5, y: -24.5}
+        - {x: 11.5, y: -24.5}
+      - - {x: -71.5, y: 57.5}
+        - {x: -71.5, y: 59.5}
+        - {x: -76.5, y: 59.5}
+        - {x: -74.5, y: 56.5}
       tessellationDetail: 0
     - serializedVersion: 2
-      name: World_2
+      name: Obj_FenceEnd
       rect:
         serializedVersion: 2
         x: 418
@@ -275,38 +300,79 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -44, y: 40.5}
+        - {x: -52, y: 24.5}
+        - {x: -52, y: -40.5}
+        - {x: 38, y: -40.5}
+        - {x: 52, y: -27.5}
+        - {x: 52, y: 25.5}
+        - {x: 37, y: 40.5}
+      - - {x: -28, y: 1.5}
+        - {x: -6, y: 1.5}
+        - {x: -6, y: -5.5}
+        - {x: -28, y: -5.5}
       tessellationDetail: 0
     - serializedVersion: 2
-      name: World_3
+      name: Obj_Tree1
       rect:
         serializedVersion: 2
         x: 571
         y: 1009
         width: 189
         height: 157
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -79.68359, y: 67.31238}
+        - {x: -94.5, y: 43.688232}
+        - {x: -89.85394, y: 18.952637}
+        - {x: -74.666016, y: 3.5791016}
+        - {x: -38.15863, y: -3.355957}
+        - {x: -7.5010986, y: 10.647827}
+        - {x: 10.263306, y: 27.874146}
+        - {x: 19.58313, y: 5.459717}
+        - {x: 53.98517, y: -9.303101}
+        - {x: 85.00226, y: 13.931885}
+        - {x: 94.5, y: 35.610107}
+        - {x: 92.18707, y: 52.692017}
+        - {x: 82.056274, y: 71.13916}
+        - {x: 47.665283, y: 70.65698}
+        - {x: 22.810364, y: 63.348755}
+        - {x: 12.059998, y: 43.247192}
+        - {x: 8.199768, y: 62.543823}
+        - {x: -11.439941, y: 78.119995}
+        - {x: -52.710144, y: 74.98035}
       tessellationDetail: 0
     - serializedVersion: 2
-      name: World_4
+      name: Obj_Bush1
       rect:
         serializedVersion: 2
         x: 823
         y: 1050
         width: 78
         height: 75
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: 22.127136, y: 37.5}
+        - {x: 6.564331, y: 37.5}
+        - {x: -6.8323364, y: 34.71118}
+        - {x: -19.013855, y: 29.729736}
+        - {x: -31.290344, y: 20.72815}
+        - {x: -38.096436, y: 6.526001}
+        - {x: -20.179932, y: -1.4160156}
+        - {x: 2.5530396, y: -5.2026367}
+        - {x: 22.527588, y: -0.6809082}
+        - {x: 39, y: 5.795288}
+        - {x: 36.51758, y: 23.40503}
       tessellationDetail: 0
     - serializedVersion: 2
-      name: World_5
+      name: Obj_WallHigh
       rect:
         serializedVersion: 2
         x: 980
@@ -317,10 +383,16 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -62.5, y: 96}
+        - {x: -77.5, y: 81}
+        - {x: -77.5, y: -96}
+        - {x: 65.5, y: -96}
+        - {x: 77.5, y: -84}
+        - {x: 77.5, y: 96}
       tessellationDetail: 0
     - serializedVersion: 2
-      name: World_6
+      name: Obj_DoorClosed
       rect:
         serializedVersion: 2
         x: 1199
@@ -331,10 +403,18 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -42.5, y: 65.5}
+        - {x: -54.5, y: 42.5}
+        - {x: -54.5, y: -50.5}
+        - {x: -41.5, y: -65.5}
+        - {x: 40.5, y: -65.5}
+        - {x: 54.5, y: -25.5}
+        - {x: 54.5, y: 56.5}
+        - {x: 41.5, y: 65.5}
       tessellationDetail: 0
     - serializedVersion: 2
-      name: World_7
+      name: Obj_DoorOpen
       rect:
         serializedVersion: 2
         x: 1395
@@ -345,10 +425,18 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -42.5, y: 65.5}
+        - {x: -54.5, y: 42.5}
+        - {x: -54.5, y: -50.5}
+        - {x: -41.5, y: -65.5}
+        - {x: 40.5, y: -65.5}
+        - {x: 54.5, y: -25.5}
+        - {x: 54.5, y: 56.5}
+        - {x: 41.5, y: 65.5}
       tessellationDetail: 0
     - serializedVersion: 2
-      name: World_8
+      name: Obj_Window
       rect:
         serializedVersion: 2
         x: 1615
@@ -359,10 +447,19 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: 22, y: 39}
+        - {x: -27, y: 39}
+        - {x: -31, y: 32}
+        - {x: -31, y: -18}
+        - {x: -26, y: -39}
+        - {x: 22, y: -39}
+        - {x: 31, y: -16}
+        - {x: 31, y: 28}
+        - {x: 30, y: 31}
       tessellationDetail: 0
     - serializedVersion: 2
-      name: World_9
+      name: Obj_WallHighSide
       rect:
         serializedVersion: 2
         x: 1764
@@ -373,10 +470,16 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: 51, y: 152.5}
+        - {x: -77, y: 24.5}
+        - {x: -77, y: -152.5}
+        - {x: -49, y: -152.5}
+        - {x: 77, y: -26.5}
+        - {x: 77, y: 152.5}
       tessellationDetail: 0
     - serializedVersion: 2
-      name: World_10
+      name: Obj_wallLowSide
       rect:
         serializedVersion: 2
         x: 1960
@@ -387,10 +490,16 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: 50, y: 88}
+        - {x: -77, y: -39}
+        - {x: -77, y: -88}
+        - {x: -48, y: -88}
+        - {x: 77, y: 37}
+        - {x: 77, y: 88}
       tessellationDetail: 0
     - serializedVersion: 2
-      name: World_11
+      name: Obj_Stair
       rect:
         serializedVersion: 2
         x: 2202
@@ -401,10 +510,26 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -31.5, y: 88}
+        - {x: -31.5, y: -88}
+        - {x: 31.5, y: -88}
+        - {x: 31.5, y: 88}
+      - - {x: -13.5, y: -31}
+        - {x: 14.5, y: -31}
+        - {x: 14.5, y: -45}
+        - {x: -13.5, y: -45}
+      - - {x: -13.5, y: 11}
+        - {x: 14.5, y: 11}
+        - {x: 14.5, y: -7}
+        - {x: -13.5, y: -7}
+      - - {x: -13.5, y: 48}
+        - {x: 14.5, y: 48}
+        - {x: 14.5, y: 35}
+        - {x: -13.5, y: 35}
       tessellationDetail: 0
     - serializedVersion: 2
-      name: World_12
+      name: T_Stair
       rect:
         serializedVersion: 2
         x: 2352
@@ -415,273 +540,355 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -77, y: 82.5}
+        - {x: -77, y: -82.5}
+        - {x: 77, y: -82.5}
+        - {x: 77, y: 73.5}
+        - {x: 61, y: 82.5}
       tessellationDetail: 0
     - serializedVersion: 2
-      name: World_13
+      name: T_sand
       rect:
         serializedVersion: 2
         x: 0
         y: 753
         width: 154
         height: 154
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 6
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -77, y: 77}
+        - {x: -77, y: -77}
+        - {x: 77, y: -77}
+        - {x: 77, y: 77}
       tessellationDetail: 0
     - serializedVersion: 2
-      name: World_14
+      name: T_GrassPlain
       rect:
         serializedVersion: 2
         x: 196
         y: 753
         width: 154
         height: 154
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 6
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -77, y: 77}
+        - {x: -77, y: -77}
+        - {x: 77, y: -77}
+        - {x: 77, y: 77}
       tessellationDetail: 0
     - serializedVersion: 2
-      name: World_15
+      name: T_WaterPlain
       rect:
         serializedVersion: 2
         x: 392
         y: 753
         width: 154
         height: 154
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 6
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -77, y: 77}
+        - {x: -77, y: -77}
+        - {x: 77, y: -77}
+        - {x: 77, y: 77}
       tessellationDetail: 0
     - serializedVersion: 2
-      name: World_16
+      name: T_StonePlain
       rect:
         serializedVersion: 2
-        x: 588
-        y: 753
+        x: 586
+        y: 755
         width: 154
         height: 154
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 6
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -77, y: 75}
+        - {x: -77, y: -77}
+        - {x: 77, y: -77}
+        - {x: 77, y: 77}
+        - {x: -75, y: 77}
       tessellationDetail: 0
     - serializedVersion: 2
-      name: World_17
+      name: T_WoodPlain
       rect:
         serializedVersion: 2
         x: 784
         y: 753
         width: 154
         height: 154
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 6
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -77, y: 77}
+        - {x: -77, y: -77}
+        - {x: 77, y: -77}
+        - {x: 77, y: 77}
       tessellationDetail: 0
     - serializedVersion: 2
-      name: World_18
+      name: T_Desert
       rect:
         serializedVersion: 2
         x: 980
         y: 753
         width: 154
         height: 154
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 6
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -77, y: 77}
+        - {x: -77, y: -77}
+        - {x: 77, y: -77}
+        - {x: 77, y: 77}
       tessellationDetail: 0
     - serializedVersion: 2
-      name: World_19
+      name: T_Grass1
       rect:
         serializedVersion: 2
         x: 1176
         y: 753
         width: 154
         height: 154
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 6
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -77, y: 77}
+        - {x: -77, y: -77}
+        - {x: 77, y: -77}
+        - {x: 77, y: 77}
       tessellationDetail: 0
     - serializedVersion: 2
-      name: World_20
+      name: T_Grass2
       rect:
         serializedVersion: 2
         x: 1372
         y: 753
         width: 154
         height: 154
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 6
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -77, y: 77}
+        - {x: -77, y: -77}
+        - {x: 77, y: -77}
+        - {x: 77, y: 77}
       tessellationDetail: 0
     - serializedVersion: 2
-      name: World_21
+      name: T_WaterMid
       rect:
         serializedVersion: 2
         x: 1568
         y: 753
         width: 154
         height: 154
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 6
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -77, y: 77}
+        - {x: -77, y: -77}
+        - {x: 77, y: -77}
+        - {x: 77, y: 77}
       tessellationDetail: 0
     - serializedVersion: 2
-      name: World_22
+      name: T_Wood
       rect:
         serializedVersion: 2
         x: 1764
         y: 753
         width: 154
         height: 154
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 6
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -77, y: 77}
+        - {x: -77, y: -77}
+        - {x: 77, y: -77}
+        - {x: 77, y: 77}
       tessellationDetail: 0
     - serializedVersion: 2
-      name: World_23
+      name: T_Road
       rect:
         serializedVersion: 2
         x: 1960
         y: 753
         width: 154
         height: 154
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 6
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -77, y: 77}
+        - {x: -77, y: -77}
+        - {x: 77, y: -77}
+        - {x: 77, y: 77}
       tessellationDetail: 0
     - serializedVersion: 2
-      name: World_24
+      name: T_RoadEdgeV
       rect:
         serializedVersion: 2
         x: 2156
         y: 753
         width: 154
         height: 155
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 6
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -77, y: 77.5}
+        - {x: -77, y: -77.5}
+        - {x: 77, y: -77.5}
+        - {x: 77, y: 77.5}
       tessellationDetail: 0
     - serializedVersion: 2
-      name: World_25
+      name: T_RoadEdgeH
       rect:
         serializedVersion: 2
         x: 2352
         y: 753
         width: 155
         height: 154
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 6
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -77.5, y: 77}
+        - {x: -77.5, y: -77}
+        - {x: 77.5, y: -77}
+        - {x: 77.5, y: 77}
       tessellationDetail: 0
     - serializedVersion: 2
-      name: World_26
+      name: T_RoadEdgeC
       rect:
         serializedVersion: 2
         x: 2548
         y: 752
         width: 154
         height: 155
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 6
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -77, y: 77.5}
+        - {x: -77, y: -77.5}
+        - {x: 77, y: -77.5}
+        - {x: 77, y: 77.5}
       tessellationDetail: 0
     - serializedVersion: 2
-      name: World_27
+      name: T_WaterEdgeWoodH
       rect:
         serializedVersion: 2
         x: 2744
         y: 753
         width: 155
         height: 154
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 6
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -77.5, y: 77}
+        - {x: -77.5, y: -77}
+        - {x: 77.5, y: -77}
+        - {x: 77.5, y: 77}
       tessellationDetail: 0
     - serializedVersion: 2
-      name: World_28
+      name: T_WaterEdgeWoodC
       rect:
         serializedVersion: 2
         x: 0
         y: 556
         width: 155
         height: 155
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 6
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -77.5, y: 77.5}
+        - {x: -77.5, y: -77.5}
+        - {x: 77.5, y: -77.5}
+        - {x: 77.5, y: 77.5}
       tessellationDetail: 0
     - serializedVersion: 2
-      name: World_29
+      name: T_WaterEdgeC
       rect:
         serializedVersion: 2
         x: 196
         y: 557
         width: 154
         height: 154
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 6
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -77, y: 77}
+        - {x: -77, y: -77}
+        - {x: 77, y: -77}
+        - {x: 77, y: 77}
       tessellationDetail: 0
     - serializedVersion: 2
-      name: World_30
+      name: T_WaterEdge1
       rect:
         serializedVersion: 2
         x: 392
         y: 557
         width: 154
         height: 154
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 6
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -77, y: 77}
+        - {x: -77, y: -77}
+        - {x: 77, y: -77}
+        - {x: 77, y: 77}
       tessellationDetail: 0
     - serializedVersion: 2
-      name: World_31
+      name: T_WaterEdge2
       rect:
         serializedVersion: 2
         x: 588
         y: 557
         width: 154
         height: 154
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 6
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -77, y: 77}
+        - {x: -77, y: -77}
+        - {x: 77, y: -77}
+        - {x: 77, y: 77}
       tessellationDetail: 0
     - serializedVersion: 2
       name: World_32
@@ -695,7 +902,14 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -14.5, y: 20.5}
+        - {x: -17.5, y: 15.5}
+        - {x: -17.5, y: -16.5}
+        - {x: -14.5, y: -20.5}
+        - {x: 12.5, y: -20.5}
+        - {x: 17.5, y: -17.5}
+        - {x: 17.5, y: 20.5}
       tessellationDetail: 0
     - serializedVersion: 2
       name: World_33
@@ -709,7 +923,15 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -8, y: 23.5}
+        - {x: -18, y: 3.5}
+        - {x: -18, y: -17.5}
+        - {x: -13, y: -23.5}
+        - {x: 12, y: -23.5}
+        - {x: 18, y: -20.5}
+        - {x: 18, y: 5.5}
+        - {x: 8, y: 23.5}
       tessellationDetail: 0
     - serializedVersion: 2
       name: World_34
@@ -723,7 +945,13 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -15, y: 21.5}
+        - {x: -15, y: -16.5}
+        - {x: -13, y: -21.5}
+        - {x: 13, y: -21.5}
+        - {x: 15, y: -19.5}
+        - {x: 15, y: 21.5}
       tessellationDetail: 0
     - serializedVersion: 2
       name: World_35
@@ -737,7 +965,14 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -15.5, y: 14}
+        - {x: -22.5, y: 4}
+        - {x: -22.5, y: -14}
+        - {x: 19.5, y: -14}
+        - {x: 22.5, y: -13}
+        - {x: 22.5, y: 3}
+        - {x: 14.5, y: 14}
       tessellationDetail: 0
     - serializedVersion: 2
       name: World_36
@@ -751,7 +986,12 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -12.5, y: 13.5}
+        - {x: -13.5, y: 10.5}
+        - {x: -13.5, y: -13.5}
+        - {x: 13.5, y: -13.5}
+        - {x: 13.5, y: 13.5}
       tessellationDetail: 0
     - serializedVersion: 2
       name: World_37
@@ -765,7 +1005,12 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -12.5, y: 13.5}
+        - {x: -13.5, y: 10.5}
+        - {x: -13.5, y: -13.5}
+        - {x: 13.5, y: -13.5}
+        - {x: 13.5, y: 13.5}
       tessellationDetail: 0
     - serializedVersion: 2
       name: World_38
@@ -779,7 +1024,15 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -3, y: 10}
+        - {x: -10, y: 3}
+        - {x: -10, y: -4}
+        - {x: -4, y: -10}
+        - {x: 4, y: -10}
+        - {x: 10, y: -4}
+        - {x: 10, y: 3}
+        - {x: 4, y: 10}
       tessellationDetail: 0
     - serializedVersion: 2
       name: World_39
@@ -793,7 +1046,15 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -3, y: 10}
+        - {x: -10, y: 3}
+        - {x: -10, y: -4}
+        - {x: -4, y: -10}
+        - {x: 4, y: -10}
+        - {x: 10, y: -4}
+        - {x: 10, y: 3}
+        - {x: 4, y: 10}
       tessellationDetail: 0
     - serializedVersion: 2
       name: World_40
@@ -807,7 +1068,15 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -3, y: 10}
+        - {x: -10, y: 3}
+        - {x: -10, y: -4}
+        - {x: -4, y: -10}
+        - {x: 4, y: -10}
+        - {x: 10, y: -4}
+        - {x: 10, y: 3}
+        - {x: 4, y: 10}
       tessellationDetail: 0
     - serializedVersion: 2
       name: World_41
@@ -821,7 +1090,15 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -3, y: 10}
+        - {x: -10, y: 3}
+        - {x: -10, y: -4}
+        - {x: -4, y: -10}
+        - {x: 4, y: -10}
+        - {x: 10, y: -4}
+        - {x: 10, y: 3}
+        - {x: 4, y: 10}
       tessellationDetail: 0
     - serializedVersion: 2
       name: World_42
@@ -835,7 +1112,14 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: 29.5, y: 69}
+        - {x: -48.5, y: 34}
+        - {x: -48.5, y: -61}
+        - {x: -13.5, y: -69}
+        - {x: 48.5, y: -69}
+        - {x: 48.5, y: 53}
+        - {x: 40.5, y: 69}
       tessellationDetail: 0
     - serializedVersion: 2
       name: World_43
@@ -849,7 +1133,14 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: 29.5, y: 69}
+        - {x: -48.5, y: 34}
+        - {x: -48.5, y: -61}
+        - {x: -13.5, y: -69}
+        - {x: 48.5, y: -69}
+        - {x: 48.5, y: 53}
+        - {x: 40.5, y: 69}
       tessellationDetail: 0
     - serializedVersion: 2
       name: World_44
@@ -863,7 +1154,14 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: 29.5, y: 69}
+        - {x: -48.5, y: 34}
+        - {x: -48.5, y: -61}
+        - {x: -13.5, y: -69}
+        - {x: 48.5, y: -69}
+        - {x: 48.5, y: 53}
+        - {x: 40.5, y: 69}
       tessellationDetail: 0
     - serializedVersion: 2
       name: World_45
@@ -877,7 +1175,14 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: 29.5, y: 69}
+        - {x: -48.5, y: 34}
+        - {x: -48.5, y: -61}
+        - {x: -13.5, y: -69}
+        - {x: 48.5, y: -69}
+        - {x: 48.5, y: 53}
+        - {x: 40.5, y: 69}
       tessellationDetail: 0
     - serializedVersion: 2
       name: World_46
@@ -891,7 +1196,14 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: 29.5, y: 69}
+        - {x: -48.5, y: 34}
+        - {x: -48.5, y: -61}
+        - {x: -13.5, y: -69}
+        - {x: 48.5, y: -69}
+        - {x: 48.5, y: 53}
+        - {x: 40.5, y: 69}
       tessellationDetail: 0
     - serializedVersion: 2
       name: World_47
@@ -905,7 +1217,13 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -4.5, y: 35}
+        - {x: -9.5, y: 12}
+        - {x: -9.5, y: -35}
+        - {x: 9.5, y: -35}
+        - {x: 9.5, y: 12}
+        - {x: 3.5, y: 35}
       tessellationDetail: 0
     - serializedVersion: 2
       name: World_48
@@ -919,7 +1237,13 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -4.5, y: 35}
+        - {x: -9.5, y: 12}
+        - {x: -9.5, y: -35}
+        - {x: 9.5, y: -35}
+        - {x: 9.5, y: 12}
+        - {x: 3.5, y: 35}
       tessellationDetail: 0
     - serializedVersion: 2
       name: World_49
@@ -933,7 +1257,16 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: 4, y: 69.5}
+        - {x: -7, y: 69.5}
+        - {x: -16, y: 53.5}
+        - {x: -16, y: -16.5}
+        - {x: -8, y: -69.5}
+        - {x: 8, y: -69.5}
+        - {x: 16, y: 21.5}
+        - {x: 16, y: 41.5}
+        - {x: 12, y: 63.5}
       tessellationDetail: 0
     - serializedVersion: 2
       name: World_50
@@ -947,7 +1280,15 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -5, y: 69}
+        - {x: -16, y: 51}
+        - {x: -16, y: -16}
+        - {x: -8, y: -69}
+        - {x: 8, y: -69}
+        - {x: 16, y: 13}
+        - {x: 16, y: 42}
+        - {x: 5, y: 69}
       tessellationDetail: 0
     - serializedVersion: 2
       name: World_51
@@ -961,7 +1302,21 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: 0, y: 44.5}
+        - {x: -15, y: 23.5}
+        - {x: -15, y: -20.5}
+        - {x: -9, y: -39.5}
+        - {x: 2, y: -44.5}
+        - {x: 15, y: -44.5}
+        - {x: 15, y: 44.5}
+      - - {x: 9, y: -26.5}
+        - {x: 4, y: -20.5}
+        - {x: 3, y: -16.5}
+        - {x: 5, y: 20.5}
+        - {x: 10, y: 27.5}
+        - {x: 9, y: 28.5}
+        - {x: 9, y: -27.5}
       tessellationDetail: 0
     - serializedVersion: 2
       name: World_52
@@ -975,7 +1330,12 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: 12, y: 44.5}
+        - {x: -4, y: 44.5}
+        - {x: -12, y: 30.5}
+        - {x: -12, y: -44.5}
+        - {x: 12, y: -44.5}
       tessellationDetail: 0
     - serializedVersion: 2
       name: World_53
@@ -989,7 +1349,14 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -4, y: 28.5}
+        - {x: -40, y: -3.5}
+        - {x: -44, y: -13.5}
+        - {x: -44, y: -28.5}
+        - {x: 44, y: -28.5}
+        - {x: 44, y: -6.5}
+        - {x: 12, y: 28.5}
       tessellationDetail: 0
     - serializedVersion: 2
       name: World_54
@@ -1003,7 +1370,11 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -9, y: 6}
+        - {x: -9, y: -6}
+        - {x: 9, y: -6}
+        - {x: 9, y: 6}
       tessellationDetail: 0
     - serializedVersion: 2
       name: World_55
@@ -1017,7 +1388,15 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -8, y: 23.5}
+        - {x: -18, y: 3.5}
+        - {x: -18, y: -17.5}
+        - {x: -13, y: -23.5}
+        - {x: 12, y: -23.5}
+        - {x: 18, y: -20.5}
+        - {x: 18, y: 5.5}
+        - {x: 8, y: 23.5}
       tessellationDetail: 0
     - serializedVersion: 2
       name: World_56
@@ -1031,7 +1410,13 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -5, y: 9.5}
+        - {x: -16, y: 4.5}
+        - {x: -16, y: -9.5}
+        - {x: 8, y: -9.5}
+        - {x: 16, y: -8.5}
+        - {x: 16, y: 9.5}
       tessellationDetail: 0
     - serializedVersion: 2
       name: World_57
@@ -1045,7 +1430,14 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -13.5, y: 25.5}
+        - {x: -23.5, y: 5.5}
+        - {x: -23.5, y: -25.5}
+        - {x: 10.5, y: -25.5}
+        - {x: 23.5, y: -16.5}
+        - {x: 23.5, y: 22.5}
+        - {x: 15.5, y: 25.5}
       tessellationDetail: 0
     - serializedVersion: 2
       name: World_58
@@ -1059,7 +1451,12 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -12.5, y: 13.5}
+        - {x: -13.5, y: 10.5}
+        - {x: -13.5, y: -13.5}
+        - {x: 13.5, y: -13.5}
+        - {x: 13.5, y: 13.5}
       tessellationDetail: 0
     - serializedVersion: 2
       name: World_59
@@ -1073,7 +1470,15 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -3, y: 10}
+        - {x: -10, y: 3}
+        - {x: -10, y: -4}
+        - {x: -4, y: -10}
+        - {x: 4, y: -10}
+        - {x: 10, y: -4}
+        - {x: 10, y: 3}
+        - {x: 4, y: 10}
       tessellationDetail: 0
     - serializedVersion: 2
       name: World_60
@@ -1087,7 +1492,15 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -3, y: 10}
+        - {x: -10, y: 3}
+        - {x: -10, y: -4}
+        - {x: -4, y: -10}
+        - {x: 4, y: -10}
+        - {x: 10, y: -4}
+        - {x: 10, y: 3}
+        - {x: 4, y: 10}
       tessellationDetail: 0
     - serializedVersion: 2
       name: World_61
@@ -1101,7 +1514,15 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -3, y: 10}
+        - {x: -10, y: 3}
+        - {x: -10, y: -4}
+        - {x: -4, y: -10}
+        - {x: 4, y: -10}
+        - {x: 10, y: -4}
+        - {x: 10, y: 3}
+        - {x: 4, y: 10}
       tessellationDetail: 0
     - serializedVersion: 2
       name: World_62
@@ -1115,7 +1536,15 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -3.5, y: 12.5}
+        - {x: -12.5, y: 3.5}
+        - {x: -12.5, y: -3.5}
+        - {x: -3.5, y: -12.5}
+        - {x: 3.5, y: -12.5}
+        - {x: 12.5, y: -3.5}
+        - {x: 12.5, y: 3.5}
+        - {x: 3.5, y: 12.5}
       tessellationDetail: 0
     - serializedVersion: 2
       name: World_63
@@ -1129,7 +1558,15 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -3.5, y: 12.5}
+        - {x: -12.5, y: 3.5}
+        - {x: -12.5, y: -3.5}
+        - {x: -3.5, y: -12.5}
+        - {x: 3.5, y: -12.5}
+        - {x: 12.5, y: -3.5}
+        - {x: 12.5, y: 3.5}
+        - {x: 3.5, y: 12.5}
       tessellationDetail: 0
     - serializedVersion: 2
       name: World_64
@@ -1143,7 +1580,15 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -3.5, y: 12.5}
+        - {x: -12.5, y: 3.5}
+        - {x: -12.5, y: -3.5}
+        - {x: -3.5, y: -12.5}
+        - {x: 3.5, y: -12.5}
+        - {x: 12.5, y: -3.5}
+        - {x: 12.5, y: 3.5}
+        - {x: 3.5, y: 12.5}
       tessellationDetail: 0
     - serializedVersion: 2
       name: World_65
@@ -1157,7 +1602,15 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -6.5, y: 22}
+        - {x: -11.5, y: 17}
+        - {x: -12.5, y: -1}
+        - {x: -12.5, y: -22}
+        - {x: 8.5, y: -22}
+        - {x: 12.5, y: -4}
+        - {x: 12.5, y: 19}
+        - {x: 11.5, y: 22}
       tessellationDetail: 0
     - serializedVersion: 2
       name: World_66
@@ -1171,7 +1624,16 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: 6, y: 23.5}
+        - {x: -7, y: 23.5}
+        - {x: -18, y: 3.5}
+        - {x: -18, y: -22.5}
+        - {x: -15, y: -23.5}
+        - {x: 17, y: -23.5}
+        - {x: 18, y: -22.5}
+        - {x: 18, y: 5.5}
+        - {x: 7, y: 22.5}
       tessellationDetail: 0
     - serializedVersion: 2
       name: World_67
@@ -1185,7 +1647,13 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -13, y: 12.5}
+        - {x: -13, y: -8.5}
+        - {x: -9, y: -12.5}
+        - {x: 13, y: -12.5}
+        - {x: 13, y: 1.5}
+        - {x: 5, y: 12.5}
       tessellationDetail: 0
     - serializedVersion: 2
       name: World_68
@@ -1199,7 +1667,14 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -15, y: 27}
+        - {x: -39, y: 21}
+        - {x: -39, y: -27}
+        - {x: 30, y: -27}
+        - {x: 39, y: -26}
+        - {x: 39, y: 9}
+        - {x: 20, y: 27}
       tessellationDetail: 0
     - serializedVersion: 2
       name: World_69
@@ -1213,7 +1688,12 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -12.5, y: 13.5}
+        - {x: -13.5, y: 10.5}
+        - {x: -13.5, y: -13.5}
+        - {x: 13.5, y: -13.5}
+        - {x: 13.5, y: 13.5}
       tessellationDetail: 0
     - serializedVersion: 2
       name: World_70
@@ -1227,7 +1707,15 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -3, y: 10}
+        - {x: -10, y: 3}
+        - {x: -10, y: -4}
+        - {x: -4, y: -10}
+        - {x: 4, y: -10}
+        - {x: 10, y: -4}
+        - {x: 10, y: 3}
+        - {x: 4, y: 10}
       tessellationDetail: 0
     - serializedVersion: 2
       name: World_71
@@ -1241,7 +1729,15 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -3.5, y: 12.5}
+        - {x: -12.5, y: 3.5}
+        - {x: -12.5, y: -3.5}
+        - {x: -3.5, y: -12.5}
+        - {x: 3.5, y: -12.5}
+        - {x: 12.5, y: -3.5}
+        - {x: 12.5, y: 3.5}
+        - {x: 3.5, y: 12.5}
       tessellationDetail: 0
     - serializedVersion: 2
       name: World_72
@@ -1255,7 +1751,14 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: 26, y: 39.5}
+        - {x: -30, y: 39.5}
+        - {x: -40, y: -24.5}
+        - {x: -40, y: -39.5}
+        - {x: 40, y: -39.5}
+        - {x: 40, y: -25.5}
+        - {x: 28, y: 37.5}
       tessellationDetail: 0
     - serializedVersion: 2
       name: World_73
@@ -1269,7 +1772,14 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -13.5, y: 45.5}
+        - {x: -13.5, y: -9.5}
+        - {x: -5.5, y: -45.5}
+        - {x: 6.5, y: -45.5}
+        - {x: 13.5, y: -13.5}
+        - {x: 13.5, y: 43.5}
+        - {x: 12.5, y: 45.5}
       tessellationDetail: 0
     - serializedVersion: 2
       name: World_74
@@ -1283,7 +1793,11 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -20, y: 12.5}
+        - {x: -20, y: -12.5}
+        - {x: 20, y: -12.5}
+        - {x: 20, y: 12.5}
       tessellationDetail: 0
     - serializedVersion: 2
       name: World_75
@@ -1297,7 +1811,17 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: 13.5, y: 25}
+        - {x: 2.5, y: 25}
+        - {x: -23.5, y: 9}
+        - {x: -23.5, y: -4}
+        - {x: -21.5, y: -12}
+        - {x: -0.5, y: -25}
+        - {x: 15.5, y: -25}
+        - {x: 19.5, y: -22}
+        - {x: 23.5, y: -16}
+        - {x: 23.5, y: 3}
       tessellationDetail: 0
     - serializedVersion: 2
       name: World_76
@@ -1311,7 +1835,15 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -7, y: 24}
+        - {x: -36, y: 2}
+        - {x: -36, y: -19}
+        - {x: -31, y: -24}
+        - {x: 32, y: -24}
+        - {x: 36, y: -23}
+        - {x: 36, y: 3}
+        - {x: 8, y: 24}
       tessellationDetail: 0
     - serializedVersion: 2
       name: World_77
@@ -1325,7 +1857,14 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -31, y: 37.5}
+        - {x: -42, y: 25.5}
+        - {x: -42, y: -31.5}
+        - {x: -37, y: -37.5}
+        - {x: 42, y: -37.5}
+        - {x: 42, y: 22.5}
+        - {x: 29, y: 37.5}
       tessellationDetail: 0
     - serializedVersion: 2
       name: World_78
@@ -1339,7 +1878,16 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -31.5, y: 9.5}
+        - {x: -31.5, y: -15.5}
+        - {x: -28.5, y: -23.5}
+        - {x: 23.5, y: -23.5}
+        - {x: 31.5, y: -22.5}
+        - {x: 31.5, y: 13.5}
+        - {x: 28.5, y: 23.5}
+        - {x: -11.5, y: 23.5}
+        - {x: -22.5, y: 22.5}
       tessellationDetail: 0
     - serializedVersion: 2
       name: World_79
@@ -1353,7 +1901,18 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: 45.5, y: 17.5}
+        - {x: 26.5, y: 33.5}
+        - {x: -23.5, y: 33.5}
+        - {x: -36.5, y: 23.5}
+        - {x: -45.5, y: 14.5}
+        - {x: -45.5, y: 7.5}
+        - {x: -33.5, y: 0.5}
+        - {x: -29.5, y: -33.5}
+        - {x: 29.5, y: -33.5}
+        - {x: 29.5, y: -20.5}
+        - {x: 45.5, y: 3.5}
       tessellationDetail: 0
     - serializedVersion: 2
       name: World_80
@@ -1367,7 +1926,13 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -23.5, y: 22}
+        - {x: -23.5, y: -18}
+        - {x: -7.5, y: -22}
+        - {x: 23.5, y: -22}
+        - {x: 23.5, y: 1}
+        - {x: 8.5, y: 22}
       tessellationDetail: 0
     - serializedVersion: 2
       name: World_81
@@ -1381,7 +1946,12 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -21, y: 20}
+        - {x: -21, y: -20}
+        - {x: 21, y: -20}
+        - {x: 21, y: 9}
+        - {x: 11, y: 20}
       tessellationDetail: 0
     - serializedVersion: 2
       name: World_82
@@ -1395,7 +1965,13 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -31.5, y: 31.5}
+        - {x: -31.5, y: -19.5}
+        - {x: -6.5, y: -31.5}
+        - {x: 6.5, y: -31.5}
+        - {x: 31.5, y: -18.5}
+        - {x: 31.5, y: 31.5}
       tessellationDetail: 0
     - serializedVersion: 2
       name: World_83
@@ -1409,7 +1985,13 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -25, y: 22}
+        - {x: -29, y: 20}
+        - {x: -29, y: -22}
+        - {x: 29, y: -22}
+        - {x: 29, y: 19}
+        - {x: 28, y: 22}
       tessellationDetail: 0
     - serializedVersion: 2
       name: World_84
@@ -1423,7 +2005,17 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: 20, y: 23}
+        - {x: 7, y: 26}
+        - {x: -24, y: 26}
+        - {x: -26, y: 21}
+        - {x: -26, y: -11}
+        - {x: -20, y: -22}
+        - {x: -6, y: -26}
+        - {x: 25, y: -26}
+        - {x: 26, y: -23}
+        - {x: 26, y: 11}
       tessellationDetail: 0
     - serializedVersion: 2
       name: World_85
@@ -1437,7 +2029,15 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: 25.5, y: 37}
+        - {x: -20.5, y: 37}
+        - {x: -36.5, y: 29}
+        - {x: -36.5, y: -24}
+        - {x: -21.5, y: -37}
+        - {x: 22.5, y: -37}
+        - {x: 36.5, y: -22}
+        - {x: 36.5, y: 26}
       tessellationDetail: 0
     - serializedVersion: 2
       name: World_86
@@ -1451,7 +2051,15 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -21, y: 37}
+        - {x: -37, y: 31}
+        - {x: -37, y: -33}
+        - {x: -22, y: -37}
+        - {x: 27, y: -37}
+        - {x: 37, y: -24}
+        - {x: 37, y: 27}
+        - {x: 27, y: 37}
       tessellationDetail: 0
     - serializedVersion: 2
       name: World_87
@@ -1465,7 +2073,11 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -12.5, y: 8}
+        - {x: -12.5, y: -8}
+        - {x: 12.5, y: -8}
+        - {x: 12.5, y: 8}
       tessellationDetail: 0
     - serializedVersion: 2
       name: World_88
@@ -1479,7 +2091,14 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: 26, y: 39.5}
+        - {x: -30, y: 39.5}
+        - {x: -40, y: -24.5}
+        - {x: -40, y: -39.5}
+        - {x: 40, y: -39.5}
+        - {x: 40, y: -25.5}
+        - {x: 28, y: 37.5}
       tessellationDetail: 0
     - serializedVersion: 2
       name: World_89
@@ -1493,7 +2112,15 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -12.5, y: 45.5}
+        - {x: -13.5, y: 43.5}
+        - {x: -13.5, y: -10.5}
+        - {x: -6.5, y: -45.5}
+        - {x: 6.5, y: -45.5}
+        - {x: 13.5, y: 16.5}
+        - {x: 13.5, y: 40.5}
+        - {x: 8.5, y: 45.5}
       tessellationDetail: 0
     - serializedVersion: 2
       name: World_90
@@ -1507,7 +2134,15 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -18, y: 12.5}
+        - {x: -20, y: 9.5}
+        - {x: -20, y: -8.5}
+        - {x: -17, y: -12.5}
+        - {x: 15, y: -12.5}
+        - {x: 20, y: -6.5}
+        - {x: 20, y: 11.5}
+        - {x: 18, y: 12.5}
       tessellationDetail: 0
     - serializedVersion: 2
       name: World_91
@@ -1521,7 +2156,15 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -4.5, y: 25}
+        - {x: -23.5, y: 9}
+        - {x: -23.5, y: -4}
+        - {x: -21.5, y: -12}
+        - {x: -4.5, y: -25}
+        - {x: 23.5, y: -25}
+        - {x: 23.5, y: 24}
+        - {x: 20.5, y: 25}
       tessellationDetail: 0
     - serializedVersion: 2
       name: World_92
@@ -1535,7 +2178,16 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: 7, y: 23}
+        - {x: -11, y: 23}
+        - {x: -36, y: 4}
+        - {x: -36, y: -17}
+        - {x: -26, y: -23}
+        - {x: 25, y: -23}
+        - {x: 36, y: -16}
+        - {x: 36, y: 2}
+        - {x: 34, y: 8}
       tessellationDetail: 0
     - serializedVersion: 2
       name: World_93
@@ -1549,7 +2201,14 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -31, y: 37.5}
+        - {x: -42, y: 25.5}
+        - {x: -42, y: -31.5}
+        - {x: -37, y: -37.5}
+        - {x: 42, y: -37.5}
+        - {x: 42, y: 22.5}
+        - {x: 29, y: 37.5}
       tessellationDetail: 0
     - serializedVersion: 2
       name: World_94
@@ -1563,7 +2222,16 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -31.5, y: 9.5}
+        - {x: -31.5, y: -15.5}
+        - {x: -28.5, y: -23.5}
+        - {x: 23.5, y: -23.5}
+        - {x: 31.5, y: -22.5}
+        - {x: 31.5, y: 13.5}
+        - {x: 28.5, y: 23.5}
+        - {x: -11.5, y: 23.5}
+        - {x: -22.5, y: 22.5}
       tessellationDetail: 0
     - serializedVersion: 2
       name: World_95
@@ -1577,7 +2245,18 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: 45.5, y: 17.5}
+        - {x: 26.5, y: 33.5}
+        - {x: -23.5, y: 33.5}
+        - {x: -36.5, y: 23.5}
+        - {x: -45.5, y: 14.5}
+        - {x: -45.5, y: 7.5}
+        - {x: -33.5, y: 0.5}
+        - {x: -29.5, y: -33.5}
+        - {x: 29.5, y: -33.5}
+        - {x: 29.5, y: -20.5}
+        - {x: 45.5, y: 3.5}
       tessellationDetail: 0
     - serializedVersion: 2
       name: World_96
@@ -1591,7 +2270,13 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -23.5, y: 22}
+        - {x: -23.5, y: -18}
+        - {x: -7.5, y: -22}
+        - {x: 23.5, y: -22}
+        - {x: 23.5, y: 1}
+        - {x: 8.5, y: 22}
       tessellationDetail: 0
     - serializedVersion: 2
       name: World_97
@@ -1605,7 +2290,12 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -21, y: 20}
+        - {x: -21, y: -20}
+        - {x: 21, y: -20}
+        - {x: 21, y: 9}
+        - {x: 11, y: 20}
       tessellationDetail: 0
     - serializedVersion: 2
       name: World_98
@@ -1619,7 +2309,13 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -31, y: 31}
+        - {x: -31, y: -19}
+        - {x: -8, y: -31}
+        - {x: 6, y: -31}
+        - {x: 31, y: -18}
+        - {x: 31, y: 31}
       tessellationDetail: 0
     - serializedVersion: 2
       name: World_99
@@ -1633,7 +2329,13 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -25, y: 22}
+        - {x: -29, y: 20}
+        - {x: -29, y: -22}
+        - {x: 29, y: -22}
+        - {x: 29, y: 19}
+        - {x: 28, y: 22}
       tessellationDetail: 0
     - serializedVersion: 2
       name: World_100
@@ -1647,7 +2349,17 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: 20, y: 23}
+        - {x: 7, y: 26}
+        - {x: -24, y: 26}
+        - {x: -26, y: 21}
+        - {x: -26, y: -11}
+        - {x: -20, y: -22}
+        - {x: -6, y: -26}
+        - {x: 25, y: -26}
+        - {x: 26, y: -23}
+        - {x: 26, y: 11}
       tessellationDetail: 0
     - serializedVersion: 2
       name: World_101
@@ -1661,7 +2373,15 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -31, y: 39}
+        - {x: -39, y: 37}
+        - {x: -39, y: -21}
+        - {x: -33, y: -30}
+        - {x: -18, y: -39}
+        - {x: 28, y: -39}
+        - {x: 39, y: -28}
+        - {x: 39, y: 39}
       tessellationDetail: 0
     - serializedVersion: 2
       name: World_102
@@ -1675,7 +2395,15 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -31, y: 39}
+        - {x: -39, y: 37}
+        - {x: -39, y: -21}
+        - {x: -33, y: -30}
+        - {x: -18, y: -39}
+        - {x: 28, y: -39}
+        - {x: 39, y: -28}
+        - {x: 39, y: 39}
       tessellationDetail: 0
     - serializedVersion: 2
       name: World_103
@@ -1689,7 +2417,11 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -12.5, y: 8}
+        - {x: -12.5, y: -8}
+        - {x: 12.5, y: -8}
+        - {x: 12.5, y: 8}
       tessellationDetail: 0
     - serializedVersion: 2
       name: World_104
@@ -1703,7 +2435,15 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -12.5, y: 45.5}
+        - {x: -13.5, y: 43.5}
+        - {x: -13.5, y: -10.5}
+        - {x: -6.5, y: -45.5}
+        - {x: 6.5, y: -45.5}
+        - {x: 13.5, y: 16.5}
+        - {x: 13.5, y: 40.5}
+        - {x: 8.5, y: 45.5}
       tessellationDetail: 0
     - serializedVersion: 2
       name: World_105
@@ -1717,7 +2457,15 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -18, y: 12.5}
+        - {x: -20, y: 9.5}
+        - {x: -20, y: -8.5}
+        - {x: -17, y: -12.5}
+        - {x: 15, y: -12.5}
+        - {x: 20, y: -6.5}
+        - {x: 20, y: 11.5}
+        - {x: 18, y: 12.5}
       tessellationDetail: 0
     - serializedVersion: 2
       name: World_106
@@ -1731,7 +2479,15 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -4.5, y: 25}
+        - {x: -23.5, y: 9}
+        - {x: -23.5, y: -4}
+        - {x: -21.5, y: -12}
+        - {x: -4.5, y: -25}
+        - {x: 23.5, y: -25}
+        - {x: 23.5, y: 24}
+        - {x: 20.5, y: 25}
       tessellationDetail: 0
     - serializedVersion: 2
       name: World_107
@@ -1745,7 +2501,15 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -7, y: 24}
+        - {x: -36, y: 2}
+        - {x: -36, y: -19}
+        - {x: -31, y: -24}
+        - {x: 32, y: -24}
+        - {x: 36, y: -23}
+        - {x: 36, y: 3}
+        - {x: 8, y: 24}
       tessellationDetail: 0
     - serializedVersion: 2
       name: World_108
@@ -1759,7 +2523,13 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -34.5, y: 37}
+        - {x: -41.5, y: 29}
+        - {x: -41.5, y: -37}
+        - {x: 41.5, y: -37}
+        - {x: 41.5, y: 30}
+        - {x: 31.5, y: 37}
       tessellationDetail: 0
     - serializedVersion: 2
       name: World_109
@@ -1773,7 +2543,16 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -31.5, y: 9.5}
+        - {x: -31.5, y: -15.5}
+        - {x: -28.5, y: -23.5}
+        - {x: 23.5, y: -23.5}
+        - {x: 31.5, y: -22.5}
+        - {x: 31.5, y: 13.5}
+        - {x: 28.5, y: 23.5}
+        - {x: -11.5, y: 23.5}
+        - {x: -22.5, y: 22.5}
       tessellationDetail: 0
     - serializedVersion: 2
       name: World_110
@@ -1787,7 +2566,16 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -23.5, y: 33.5}
+        - {x: -36.5, y: 23.5}
+        - {x: -45.5, y: 14.5}
+        - {x: -45.5, y: 2.5}
+        - {x: -40.5, y: -31.5}
+        - {x: -33.5, y: -33.5}
+        - {x: 45.5, y: -33.5}
+        - {x: 45.5, y: 17.5}
+        - {x: 26.5, y: 33.5}
       tessellationDetail: 0
     - serializedVersion: 2
       name: World_111
@@ -1801,7 +2589,14 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: 26, y: 39.5}
+        - {x: -30, y: 39.5}
+        - {x: -40, y: -24.5}
+        - {x: -40, y: -39.5}
+        - {x: 40, y: -39.5}
+        - {x: 40, y: -25.5}
+        - {x: 28, y: 37.5}
       tessellationDetail: 0
     - serializedVersion: 2
       name: World_112
@@ -1815,7 +2610,13 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -23.5, y: 21.5}
+        - {x: -23.5, y: -18.5}
+        - {x: -11.5, y: -21.5}
+        - {x: 23.5, y: -21.5}
+        - {x: 23.5, y: 10.5}
+        - {x: -0.5, y: 21.5}
       tessellationDetail: 0
     - serializedVersion: 2
       name: World_113
@@ -1829,7 +2630,12 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -21, y: 20}
+        - {x: -21, y: -20}
+        - {x: 21, y: -20}
+        - {x: 21, y: 9}
+        - {x: 11, y: 20}
       tessellationDetail: 0
     - serializedVersion: 2
       name: World_114
@@ -1843,7 +2649,13 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -31, y: 31}
+        - {x: -31, y: -19}
+        - {x: -8, y: -31}
+        - {x: 6, y: -31}
+        - {x: 31, y: -18}
+        - {x: 31, y: 31}
       tessellationDetail: 0
     - serializedVersion: 2
       name: World_115
@@ -1857,7 +2669,11 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -29, y: 22.5}
+        - {x: -29, y: -22.5}
+        - {x: 29, y: -22.5}
+        - {x: 29, y: 22.5}
       tessellationDetail: 0
     - serializedVersion: 2
       name: World_116
@@ -1871,7 +2687,17 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: 20, y: 23}
+        - {x: 7, y: 26}
+        - {x: -24, y: 26}
+        - {x: -26, y: 21}
+        - {x: -26, y: -11}
+        - {x: -20, y: -22}
+        - {x: -6, y: -26}
+        - {x: 25, y: -26}
+        - {x: 26, y: -23}
+        - {x: 26, y: 11}
       tessellationDetail: 0
     - serializedVersion: 2
       name: World_117
@@ -1885,7 +2711,15 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -31, y: 39}
+        - {x: -39, y: 37}
+        - {x: -39, y: -21}
+        - {x: -33, y: -30}
+        - {x: -18, y: -39}
+        - {x: 28, y: -39}
+        - {x: 39, y: -28}
+        - {x: 39, y: 39}
       tessellationDetail: 0
     - serializedVersion: 2
       name: World_118
@@ -1899,7 +2733,15 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -31, y: 39}
+        - {x: -39, y: 37}
+        - {x: -39, y: -21}
+        - {x: -33, y: -30}
+        - {x: -18, y: -39}
+        - {x: 28, y: -39}
+        - {x: 39, y: -28}
+        - {x: 39, y: 39}
       tessellationDetail: 0
     - serializedVersion: 2
       name: World_119
@@ -1913,7 +2755,11 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -12.5, y: 8}
+        - {x: -12.5, y: -8}
+        - {x: 12.5, y: -8}
+        - {x: 12.5, y: 8}
       tessellationDetail: 0
     - serializedVersion: 2
       name: World_120
@@ -1927,7 +2773,14 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: 26, y: 39.5}
+        - {x: -30, y: 39.5}
+        - {x: -40, y: -24.5}
+        - {x: -40, y: -39.5}
+        - {x: 40, y: -39.5}
+        - {x: 40, y: -25.5}
+        - {x: 28, y: 37.5}
       tessellationDetail: 0
     - serializedVersion: 2
       name: World_121
@@ -1941,7 +2794,15 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -12.5, y: 45.5}
+        - {x: -13.5, y: 43.5}
+        - {x: -13.5, y: -10.5}
+        - {x: -6.5, y: -45.5}
+        - {x: 6.5, y: -45.5}
+        - {x: 13.5, y: 16.5}
+        - {x: 13.5, y: 40.5}
+        - {x: 8.5, y: 45.5}
       tessellationDetail: 0
     - serializedVersion: 2
       name: World_122
@@ -1955,7 +2816,15 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -18, y: 12.5}
+        - {x: -20, y: 9.5}
+        - {x: -20, y: -8.5}
+        - {x: -17, y: -12.5}
+        - {x: 15, y: -12.5}
+        - {x: 20, y: -6.5}
+        - {x: 20, y: 11.5}
+        - {x: 18, y: 12.5}
       tessellationDetail: 0
     - serializedVersion: 2
       name: World_123
@@ -1969,7 +2838,15 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: 2.5, y: 25}
+        - {x: -24.5, y: 9}
+        - {x: -24.5, y: -8}
+        - {x: -23.5, y: -16}
+        - {x: -5.5, y: -25}
+        - {x: 24.5, y: -25}
+        - {x: 24.5, y: 11}
+        - {x: 12.5, y: 25}
       tessellationDetail: 0
     - serializedVersion: 2
       name: World_124
@@ -1983,7 +2860,15 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -7, y: 24}
+        - {x: -36, y: 2}
+        - {x: -36, y: -19}
+        - {x: -31, y: -24}
+        - {x: 32, y: -24}
+        - {x: 36, y: -23}
+        - {x: 36, y: 3}
+        - {x: 8, y: 24}
       tessellationDetail: 0
     - serializedVersion: 2
       name: World_125
@@ -1997,7 +2882,13 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -34.5, y: 37}
+        - {x: -41.5, y: 29}
+        - {x: -41.5, y: -37}
+        - {x: 41.5, y: -37}
+        - {x: 41.5, y: 30}
+        - {x: 31.5, y: 37}
       tessellationDetail: 0
     - serializedVersion: 2
       name: World_126
@@ -2011,7 +2902,16 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -31.5, y: 9.5}
+        - {x: -31.5, y: -15.5}
+        - {x: -28.5, y: -23.5}
+        - {x: 23.5, y: -23.5}
+        - {x: 31.5, y: -22.5}
+        - {x: 31.5, y: 13.5}
+        - {x: 28.5, y: 23.5}
+        - {x: -11.5, y: 23.5}
+        - {x: -22.5, y: 22.5}
       tessellationDetail: 0
     - serializedVersion: 2
       name: World_127
@@ -2025,7 +2925,17 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: 36.5, y: 33.5}
+        - {x: -29.5, y: 33.5}
+        - {x: -42.5, y: 30.5}
+        - {x: -45.5, y: 17.5}
+        - {x: -45.5, y: 4.5}
+        - {x: -38.5, y: -25.5}
+        - {x: -30.5, y: -33.5}
+        - {x: 29.5, y: -33.5}
+        - {x: 45.5, y: -6.5}
+        - {x: 45.5, y: 18.5}
       tessellationDetail: 0
     - serializedVersion: 2
       name: World_128
@@ -2039,7 +2949,15 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -0.5, y: 22}
+        - {x: -23.5, y: 22}
+        - {x: -23.5, y: -1}
+        - {x: -18.5, y: -12}
+        - {x: -7.5, y: -22}
+        - {x: 23.5, y: -22}
+        - {x: 23.5, y: 1}
+        - {x: 17.5, y: 16}
       tessellationDetail: 0
     - serializedVersion: 2
       name: World_129
@@ -2053,7 +2971,12 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -21, y: 20}
+        - {x: -21, y: -20}
+        - {x: 21, y: -20}
+        - {x: 21, y: 9}
+        - {x: 11, y: 20}
       tessellationDetail: 0
     - serializedVersion: 2
       name: World_130
@@ -2067,7 +2990,13 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -31, y: 31}
+        - {x: -31, y: -19}
+        - {x: -8, y: -31}
+        - {x: 6, y: -31}
+        - {x: 31, y: -18}
+        - {x: 31, y: 31}
       tessellationDetail: 0
     - serializedVersion: 2
       name: World_131
@@ -2081,7 +3010,11 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -29, y: 22.5}
+        - {x: -29, y: -22.5}
+        - {x: 29, y: -22.5}
+        - {x: 29, y: 22.5}
       tessellationDetail: 0
     - serializedVersion: 2
       name: World_132
@@ -2095,7 +3028,17 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: 20, y: 23}
+        - {x: 7, y: 26}
+        - {x: -24, y: 26}
+        - {x: -26, y: 21}
+        - {x: -26, y: -11}
+        - {x: -20, y: -22}
+        - {x: -6, y: -26}
+        - {x: 25, y: -26}
+        - {x: 26, y: -23}
+        - {x: 26, y: 11}
       tessellationDetail: 0
     - serializedVersion: 2
       name: World_133
@@ -2109,7 +3052,15 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -31, y: 39}
+        - {x: -39, y: 37}
+        - {x: -39, y: -21}
+        - {x: -33, y: -30}
+        - {x: -18, y: -39}
+        - {x: 28, y: -39}
+        - {x: 39, y: -28}
+        - {x: 39, y: 39}
       tessellationDetail: 0
     - serializedVersion: 2
       name: World_134
@@ -2123,7 +3074,15 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -31, y: 39}
+        - {x: -39, y: 37}
+        - {x: -39, y: -21}
+        - {x: -33, y: -30}
+        - {x: -18, y: -39}
+        - {x: 28, y: -39}
+        - {x: 39, y: -28}
+        - {x: 39, y: 39}
       tessellationDetail: 0
     - serializedVersion: 2
       name: World_135
@@ -2137,7 +3096,11 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -12.5, y: 8}
+        - {x: -12.5, y: -8}
+        - {x: 12.5, y: -8}
+        - {x: 12.5, y: 8}
       tessellationDetail: 0
     outline: []
     physicsShape: []

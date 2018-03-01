@@ -64,13 +64,31 @@ public class Stat : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
+		HandleUI ();
+	}
+
+
+	// Initialize Game Start Stats
+	public void Initialize (float current, float max) {
+		if (slider == null) {
+			slider = GetComponent<Slider> ();
+		}
+		// Set max Value to Init Max
+		MyMaxValue = max;
+		// Set current Value to Init Current
+		MyCurrentValue = current;
+		//
+		slider.value = MyCurrentValue;
+	}
+
+
+	//
+	private void HandleUI () {
+		
 		// Set UI values of Sliders to Correct Value
 		if (currentValue != slider.value) {
 			// Do Nice transition
 			slider.value = Mathf.Lerp (slider.value, currentValue, statUISmooth * Time.deltaTime);
-		} else {
-			// Just ajust value
-			slider.value = currentValue;
 		}
 
 		if (valueText != null) {
@@ -82,14 +100,5 @@ public class Stat : MonoBehaviour {
 		if (maxValue != slider.maxValue) {
 			slider.maxValue = maxValue;
 		}
-	}
-
-
-	// Initialize Game Start Stats
-	public void Initialize (float current, float max) {
-		// Set max Value to Init Max
-		MyMaxValue = max;
-		// Set current Value to Init Current
-		MyCurrentValue = current;
 	}
 }

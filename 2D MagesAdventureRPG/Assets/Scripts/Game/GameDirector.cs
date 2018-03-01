@@ -11,7 +11,8 @@ using UnityEngine.EventSystems;
 public class GameDirector : MonoBehaviour {
 
 	//
-	[SerializeField] private Player player;
+	[SerializeField]
+	private Player player;
 
 	private NPC currentTarget;
 
@@ -46,7 +47,13 @@ public class GameDirector : MonoBehaviour {
 				//
 				player.Target = currentTarget.Select ();
 
+				// Show target UI frame
+				UIDirector.GetInstance.ShowTargetFrame (currentTarget);
+
 			} else {
+
+				// Hide Target UI frame
+				UIDirector.GetInstance.HideTargetFrame ();
 
 				//
 				if (currentTarget != null) {

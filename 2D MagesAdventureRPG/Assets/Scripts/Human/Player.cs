@@ -10,18 +10,21 @@ using UnityEngine;
 public class Player : Character {
 
 	// StatClass, Mana of Player
-	[SerializeField] private Stat mana;
+	[SerializeField]
+	private Stat mana;
 
 	// Initial value of Mana
 	private float initManaValue = 100f;
 	//
 	private SpellBook spellBook;
 	//
-	[SerializeField] private Transform[] staffGems;
+	[SerializeField]
+	private Transform[] staffGems;
 	//
 	private int gemIndex;
 	//
-	[SerializeField] private SightBlock[] sightblocks;
+	[SerializeField]
+	private SightBlock[] sightblocks;
 
 	//
 	public Transform Target {
