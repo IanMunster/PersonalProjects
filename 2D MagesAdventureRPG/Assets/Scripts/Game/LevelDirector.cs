@@ -1,7 +1,9 @@
-﻿using System;
+﻿/*
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.U2D;
 
 /// <summary>
 /// Level director.
@@ -9,7 +11,7 @@ using UnityEngine;
 /// </summary>
 
 public class LevelDirector : MonoBehaviour {
-
+	//
 	[SerializeField]
 	private Transform map;
 	//
@@ -22,7 +24,10 @@ public class LevelDirector : MonoBehaviour {
 	[SerializeField]
 	private Sprite defaultTile;
 	//
-	//private Dictionary <,>
+	private Dictionary <Point,GameObject> waterTiles = new Dictionary <Point, GameObject> ();
+	//
+	[SerializeField] private SpriteAtlas waterAtlas;
+
 
 	//
 	private Vector3 GetWorldStartPos {
@@ -67,6 +72,13 @@ public class LevelDirector : MonoBehaviour {
 						GameObject obj = Instantiate(newElement.GetElementPrefab);
 						//
 						obj.transform.position = new Vector2 (xPos, yPos);
+
+						//
+						if (newElement.GetTileTag == "Water") {
+							//
+							waterTiles.Add (new Point (x, y), obj);
+						}
+
 						//
 						if (newElement.GetTileTag == "Tree" ) {
 							//
@@ -78,7 +90,83 @@ public class LevelDirector : MonoBehaviour {
 				}
 			}
 		}
+		CheckWater ();
 	}
+
+
+	//
+	private void CheckWater () {
+		//
+		foreach (KeyValuePair<Point, GameObject> tile in waterTiles) {
+			//
+			string composition = TileCheck (tile.Key);
+
+			// Water Corner
+			if (composition[1] == 'E' && composition[3] == 'W' && composition[4] == 'E' && composition[6] == 'W' ) {
+				//
+				tile.Value.GetComponent<SpriteRenderer>().sprite = waterAtlas.GetSprite("T_WaterEdgeC");
+			}
+
+			// Water Corner Overlaps
+			if (composition[1] == 'W' && composition[2] == 'E' && composition[4] == 'W') {
+				//
+				GameObject obj = Instantiate (tile.Value, tile.Value.transform.position, Quaternion.identity, map);
+				SpriteRenderer objRenderer = obj.GetComponent <SpriteRenderer> ();
+				objRenderer.sprite = waterAtlas.GetSprite ("T_WaterEdgeWoodC");
+				objRenderer.sortingOrder = 1;
+			}
+
+			// For Overlapping WaterFX (waves)
+			if (composition[1] == 'W' && composition[2] == 'W' && composition[4] == 'W' && composition[6] == 'W') {
+				//
+				int randomChance = UnityEngine.Random.Range (0,100);
+				if (randomChance < 15) {
+					//
+					tile.Value.GetComponent<SpriteRenderer> ().sprite = waterAtlas.GetSprite("T_WaterMid");
+				}
+			}
+			// Place Tile (lilypads) Surrounded by Water
+			if (composition[1] == 'W' && composition[2] == 'W' && composition[3] == 'W' && composition[4] == 'W' && composition[5] == 'W' && composition[6] == 'W') {
+				//
+				int randomChance = UnityEngine.Random.Range (0,100);
+				if (randomChance < 10) {
+					//
+					tile.Value.GetComponent<SpriteRenderer> ().sprite = waterAtlas.GetSprite("T_WaterMid");
+				}
+			}
+		}
+
+	}
+
+
+	//
+	private string TileCheck (Point currentPoint) {
+		//
+		string composition = string.Empty;
+
+		//
+		for (int x = -1; x <= 1; x++) {
+			//
+			for (int y = -1; y <= 1; y++) {
+				//
+				if (x != 0 || y != 0) {
+					//
+					if (waterTiles.ContainsKey (new Point (currentPoint.MyX + x, currentPoint.MyY + y))) {
+						//
+						composition += "W";
+					} else {
+						//
+						composition += "E";
+					}
+				}
+			}
+		}
+		//
+		return composition;
+	}
+
+
+
 }
 
 
@@ -111,3 +199,22 @@ public class MapElement {
 		get { return elementPrefab; }
 	}
 }
+
+
+/// <summary>
+/// Point.
+/// 
+/// </summary>
+public struct Point {
+	//
+	public int MyX { get; set; }
+	public int MyY { get; set; }
+
+	//
+	public Point (int x, int y) {
+		//
+		this.MyX = x;
+		this.MyY = y;
+	}
+}
+*/
