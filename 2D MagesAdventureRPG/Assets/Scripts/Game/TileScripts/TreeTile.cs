@@ -11,13 +11,20 @@ using UnityEditor;
 
 public class TreeTile : Tile {
 
+	SpriteRenderer renderer;
+
 	public override bool StartUp (Vector3Int position, ITilemap tilemap, GameObject gameObject) {
 		//
-		gameObject.GetComponent<SpriteRenderer> ().sortingOrder = -position.y * 2;
-
+		renderer = gameObject.GetComponent<SpriteRenderer> ();
+		if (renderer != null) {
+			renderer.sortingOrder = -position.y * 2;
+		} else {
+			Debug.Log ("No SpriteRenderer on GameObject Tree");
+		}
 		//
 		return base.StartUp(position, tilemap, gameObject);
 	}
+
 
 	//
 	#if UNITY_EDITOR

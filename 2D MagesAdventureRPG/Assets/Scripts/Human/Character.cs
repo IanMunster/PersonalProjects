@@ -10,9 +10,21 @@ using UnityEngine;
 [RequireComponent (typeof(Rigidbody2D))]
 public abstract class Character : MonoBehaviour {
 
+	// Rigidbody Component for Movement
+	private Rigidbody2D rigid;
+	// Animator Component for Movement
+	protected Animator anim;
+	//
+	[SerializeField]
+	protected Transform hitBox;
+
+
 	//
 	[SerializeField]
 	protected Stat health;
+	// Initial value of Health
+	[SerializeField]
+	private float initHealthValue;
 	//
 	public Stat GetHealthStat {
 		get {
@@ -21,33 +33,35 @@ public abstract class Character : MonoBehaviour {
 	}
 
 
-	// Initial value of Health
-	[SerializeField]
-	private float initHealthValue;
+
 
 	// Movement speed
 	[SerializeField]
-	private float speed;
-	// Rigidbody Component for Movement
-	private Rigidbody2D rigid;
-
+	protected float speed;
+	//
+	public float Speed {
+		get{ return speed; }
+		set{ speed = value; }
+	}
 
 	// Direction of Movement
 	protected Vector2 direction;
-	// Animator Component for Movement
-	protected Animator anim;
+	//
+	public Vector2 Direction {
+		get{ return direction; }
+		set{ direction = value; }
+	}
+
+
+
 	//
 	protected Coroutine attackRoutine;
 	// Bool to check if Attacking
 	protected bool isAttacking = false;
-	//
-	[SerializeField]
-	protected Transform hitBox;
-
 
 
 	// Use this for initialization (beforeStart)
-	protected virtual void Awake () {
+	protected virtual void Start () {
 
 		health.Initialize (initHealthValue, initHealthValue);
 		// Find Components

@@ -38,12 +38,12 @@ public class Player : Character {
 
 
 	// Use this for initialization (Before Start)
-	protected override void Awake () {
+	protected override void Start () {
 		
 		spellBook = GetComponent <SpellBook> ();
 		mana.Initialize (initManaValue, initManaValue);
 
-		base.Awake ();
+		base.Start ();
 	}
 
 

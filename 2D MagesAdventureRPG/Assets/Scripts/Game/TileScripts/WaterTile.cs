@@ -27,7 +27,7 @@ public class WaterTile : Tile {
 		//
 		return base.StartUp (position, tilemap, gameObject);
 	}
-
+	/*
 	/// <summary>
 	/// Refreshes this tile when something changes
 	/// </summary>
@@ -48,7 +48,7 @@ public class WaterTile : Tile {
 			}
 		}
 	}
-
+	*/
 
 	/// <summary>
 	/// Changes the tiles sprite to the correct sprites based on the situation
