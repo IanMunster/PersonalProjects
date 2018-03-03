@@ -19,6 +19,15 @@ public class WaterTile : Tile {
 	[SerializeField]
 	private Sprite preview;
 
+
+	/// <summary>>
+	/// 
+	/// </summary>
+	public override bool StartUp (Vector3Int position, ITilemap tilemap, GameObject gameObject) {
+		//
+		return base.StartUp (position, tilemap, gameObject);
+	}
+
 	/// <summary>
 	/// Refreshes this tile when something changes
 	/// </summary>
@@ -181,7 +190,7 @@ public class WaterTile : Tile {
 	#if UNITY_EDITOR
 	[MenuItem("Assets/Create/Tiles/WaterTile")]
 	public static void CreateWaterTile() {
-		string path = EditorUtility.SaveFilePanelInProject("Save Watertile", "New Watertile", "asset", "Save watertile", "Assets");
+		string path = EditorUtility.SaveFilePanelInProject("Save WaterTile", "New WaterTile", "asset", "Save WaterTile", "Assets");
 		if (path == "") {
 			return;
 		}
