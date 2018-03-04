@@ -63,8 +63,7 @@ public class Player : Character {
 		// Store the input
 		direction.y = Input.GetAxisRaw ("Vertical");
 		direction.x = Input.GetAxisRaw ("Horizontal");
-
-
+		//
 		if (direction.y < -0.1f) {
 			gemIndex = 0;
 		} else if (direction.y > 0.1f) {
@@ -75,13 +74,9 @@ public class Player : Character {
 			gemIndex = 2;
 		}
 
-		if (Input.GetKeyDown(KeyCode.I)) {
-			health.MyCurrentValue += 10;
-			mana.MyCurrentValue += 20;
-		} 
-		if (Input.GetKeyDown(KeyCode.O)) {
-			health.MyCurrentValue -= 10;
-			mana.MyCurrentValue -= 20;
+		//
+		if (IsMoving) {
+			StopAttack ();
 		}
 	}
 
@@ -102,9 +97,9 @@ public class Player : Character {
 		// 
 		Spell spell = spellBook.CastSpell (spellIndex);
 		//
-		isAttacking = true;
+		IsAttacking = true;
 		//
-		anim.SetBool ("Attack", isAttacking);
+		Anim.SetBool ("Attack", IsAttacking);
 
 		yield return new WaitForSeconds (spell.GetCastTime);
 
@@ -125,7 +120,7 @@ public class Player : Character {
 		//
 		BlockSight ();
 		//
-		if (Target != null && !isAttacking && !IsMoving && InLineOfSight()) {
+		if (Target != null && Target.GetComponentInParent<Character>().IsAlive && !IsAttacking && !IsMoving && InLineOfSight()) {
 			//
 			attackRoutine = StartCoroutine (Attack(spellIndex));
 		}
@@ -161,11 +156,16 @@ public class Player : Character {
 	}
 
 
-	public override void StopAttack () {
-
+	//
+	public void StopAttack () {
 		spellBook.StopCasting ();
 
-		base.StopAttack ();
-
+		if (attackRoutine != null) {
+			StopCoroutine (attackRoutine);
+			//
+			IsAttacking = false;
+			//
+			Anim.SetBool ("Attack", IsAttacking);
+		}
 	}
 }

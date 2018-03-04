@@ -221,6 +221,8 @@ Tilemap:
     m_Data: {fileID: 11400000, guid: bc6d1e4e1a4328746a86cb6181b2db3e, type: 2}
   - m_RefCount: 1
     m_Data: {fileID: 11400000, guid: b3201e73c41c3654a9ccd9b006528fc2, type: 2}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   m_TileSpriteArray:
   - m_RefCount: 1
     m_Data: {fileID: 21300000, guid: 46131c8b7c7c8bb4d9f129906619c117, type: 3}
@@ -236,6 +238,8 @@ Tilemap:
     m_Data: {fileID: 21300000, guid: 104316c1e9791af4a88868acab558e24, type: 3}
   - m_RefCount: 1
     m_Data: {fileID: 21300006, guid: 9193ba90a1e326547b4618569e4a506f, type: 3}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   m_TileMatrixArray:
   - m_RefCount: 7
     m_Data:
@@ -263,7 +267,7 @@ Tilemap:
   m_AnimationFrameRate: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Origin: {x: -3, y: -2, z: 0}
-  m_Size: {x: 19, y: 3, z: 1}
+  m_Size: {x: 19, y: 4, z: 1}
   m_TileAnchor: {x: 0.5, y: 0.5, z: 0}
   m_TileOrientation: 0
   m_TileOrientationMatrix:
@@ -284,6 +288,8 @@ Tilemap:
     e32: 0
     e33: 1
   m_TileRefreshArray:
+  - serializedVersion: 1
+    m_DirtyIndex: 0
   - serializedVersion: 1
     m_DirtyIndex: 0
   - serializedVersion: 1

@@ -14,24 +14,38 @@ public class Enemy : NPC {
 	private CanvasGroup healthGroup;
 
 	//
-	private Transform target;
-	//
-	public Transform Target {
-		get { return target; }
-		set { target = value; }
+	public float AttackRange {
+		get;
+		set;
 	}
-
+	//
+	public float AttackCooldownTime {
+		get;
+		set;
+	}
 	//
 	private IState currentState;
 
 
+	//
 	protected void Awake () {
+		AttackRange = 1f;
 		ChangeState (new IdleState());
 	}
 
 	//
 	protected override void Update () {
-		currentState.Update ();
+		//
+		if (IsAlive) {
+			//
+			if (!IsAttacking) {
+				//
+				AttackCooldownTime += Time.deltaTime;
+			}
+			//
+			currentState.Update ();
+		}
+
 		//
 		base.Update ();
 	}
