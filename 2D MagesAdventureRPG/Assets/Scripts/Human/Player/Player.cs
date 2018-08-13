@@ -30,12 +30,6 @@ public class Player : Character {
 	[SerializeField]
 	private SightBlock[] sightblocks;
 
-	//
-	public Transform Target {
-		get;
-		set;
-	}
-
 
 	// Use this for initialization (Before Start)
 	protected override void Start () {
@@ -107,7 +101,7 @@ public class Player : Character {
 			//
 			SpellScript spellScript = Instantiate (spell.GetSpellPrefab, staffGems[gemIndex].position, Quaternion.identity).GetComponent<SpellScript> ();
 			//
-			spellScript.Initialize (currentTarget, spell.GetDmg);
+			spellScript.Initialize (currentTarget, spell.GetDmg, transform);
 		}
 		//
 		StopAttack ();

@@ -17,6 +17,8 @@ public class SpellScript : MonoBehaviour {
 	[SerializeField]
 	private float speed;
 	//
+	private Transform damageSource;
+	//
 	private int damage;
 
 	//
@@ -35,10 +37,14 @@ public class SpellScript : MonoBehaviour {
 		anim = GetComponentInChildren <Animator> ();
 	}
 
-	public void Initialize (Transform target, int damage) {
+
+	//
+	public void Initialize (Transform target, int damage, Transform damageSource) {
 		this.Target = target;
 		this.damage = damage;
+		this.damageSource = damageSource;
 	}
+
 
 	// Update is called once per frame
 	void Update () {
@@ -61,15 +67,18 @@ public class SpellScript : MonoBehaviour {
 		} 
 	}
 
+
 	//
 	private void OnTriggerEnter2D (Collider2D collision) {
 
 		//
 		if (collision.tag == "HitBox" && collision.transform == Target) {
 			//
+			Character character = collision.GetComponentInParent <Character> ();
+			//
 			speed = 0;
 			//
-			collision.GetComponentInParent <Enemy>().TakeDamage (damage);
+			character.TakeDamage (damage, damageSource);
 			//
 			anim.SetTrigger ("Hit");
 			//

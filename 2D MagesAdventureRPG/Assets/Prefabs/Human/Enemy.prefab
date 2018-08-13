@@ -359,6 +359,8 @@ MonoBehaviour:
   speed: 0.5
   portrait: {fileID: 21300266, guid: 9193ba90a1e326547b4618569e4a506f, type: 3}
   healthGroup: {fileID: 225041640236411310}
+  initAttackRange: 1
+  initAggroRange: 2
 --- !u!114 &114040299607480316
 MonoBehaviour:
   m_ObjectHideFlags: 1
