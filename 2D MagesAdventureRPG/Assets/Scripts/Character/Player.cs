@@ -9,6 +9,18 @@ using UnityEngine;
 
 public class Player : Character {
 
+	// Singleton Structure
+	private static Player instance;
+	//
+	public static Player GetInstance {
+		get {
+			if (instance == null) {
+				instance = FindObjectOfType <Player> ();
+			}
+			return instance;
+		}
+	}
+
 	// StatClass, Mana of Player
 	[SerializeField]
 	private Stat mana;
@@ -54,23 +66,40 @@ public class Player : Character {
 
 	// Function to get Input
 	private void GetInput () {
-		// Store the input
-		direction.y = Input.GetAxisRaw ("Vertical");
-		direction.x = Input.GetAxisRaw ("Horizontal");
+
 		//
-		if (direction.y < -0.1f) {
+		Direction = Vector2.zero;
+
+		if (Input.GetKey (KeybindDirector.GetInstance.Keybinds["UP"])) {
 			gemIndex = 0;
-		} else if (direction.y > 0.1f) {
-			gemIndex = 3;
-		} else if (direction.x < -0.1f) {
-			gemIndex = 1;
-		} else if (direction.x > 0.1f) {
-			gemIndex = 2;
+			Direction += Vector2.up;
 		}
+		if (Input.GetKey (KeybindDirector.GetInstance.Keybinds["LEFT"])) {
+			gemIndex = 1;
+			Direction += Vector2.left;
+		}
+		if (Input.GetKey (KeybindDirector.GetInstance.Keybinds["DOWN"])) {
+			gemIndex = 3;
+			Direction += Vector2.down;
+		}
+		if (Input.GetKey (KeybindDirector.GetInstance.Keybinds["RIGHT"])) {
+			gemIndex = 2;
+			Direction += Vector2.right;
+		}
+
 
 		//
 		if (IsMoving) {
 			StopAttack ();
+		}
+
+		//
+		foreach (string action in KeybindDirector.GetInstance.Actionbinds.Keys) {
+			// 
+			if (Input.GetKeyDown (KeybindDirector.GetInstance.Actionbinds[action])) {
+				//
+				UIDirector.GetInstance.ClickActionButton (action);
+			}
 		}
 	}
 
@@ -84,12 +113,12 @@ public class Player : Character {
 
 
 	// Test function to Attack
-	private IEnumerator Attack (int spellIndex) {
+	private IEnumerator Attack (string spellName) {
 
 		//
 		Transform currentTarget = Target;
 		// 
-		Spell spell = spellBook.CastSpell (spellIndex);
+		Spell spell = spellBook.CastSpell (spellName);
 		//
 		IsAttacking = true;
 		//
@@ -110,13 +139,13 @@ public class Player : Character {
 
 
 	//
-	public void CastSpell (int spellIndex) {
+	public void CastSpell (string spellName) {
 		//
 		BlockSight ();
 		//
 		if (Target != null && Target.GetComponentInParent<Character>().IsAlive && !IsAttacking && !IsMoving && InLineOfSight()) {
 			//
-			attackRoutine = StartCoroutine (Attack(spellIndex));
+			attackRoutine = StartCoroutine (Attack(spellName));
 		}
 	}
 

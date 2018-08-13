@@ -10,7 +10,7 @@ using UnityEngine;
 /// </summary>
 
 [Serializable]
-public class Spell {
+public class Spell : IUseable {
 
 	//
 	[SerializeField]
@@ -68,10 +68,19 @@ public class Spell {
 		}
 	}
 
+
+	//
 	public float GetCastTime {
 		get {
 			return castTime;
 		}
+	}
+
+
+	// 
+	public void Use() {
+		//
+		Player.GetInstance.CastSpell (GetName);
 	}
 
 }

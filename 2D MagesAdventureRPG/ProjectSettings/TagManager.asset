@@ -8,6 +8,7 @@ TagManager:
   - HitBox
   - Obstacle
   - Shock
+  - KeyBind
   layers:
   - Default
   - TransparentFX

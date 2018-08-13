@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -20,9 +21,7 @@ public class UIDirector : MonoBehaviour {
 
 	//
 	[SerializeField]
-	private Button[] actionButtons;
-	//
-	private KeyCode action1, action2, action3;
+	private ActionButton[] actionButtons;
 
 	//
 	[SerializeField]
@@ -32,41 +31,36 @@ public class UIDirector : MonoBehaviour {
 	//
 	private Image targetFramePortrait;
 
+	//
+	[SerializeField]
+	private CanvasGroup keybindMenu;
+	//
+	private GameObject[] keybindButtons;
+
+	//
+	private void Awake () {
+		//
+		keybindButtons = GameObject.FindGameObjectsWithTag("KeyBind");
+	}
 
 	// Use this for initialization
 	void Start () {
-		// key binds
-		action1 = KeyCode.Alpha1;
-		action2 = KeyCode.Alpha2;
-		action3 = KeyCode.Alpha3;
-
 		//
 		targetFrameHealth = targetFrame.GetComponentInChildren<Stat> ();
 		//
 		targetFramePortrait = targetFrame.transform.GetChild(0).GetChild(1).GetComponent<Image>();
+
+		//
+		SetUseable (actionButtons[0],SpellBook.GetInstance.GetSpell("Fireball") );
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		if (Input.GetKeyDown(action1)) {
-			ActionButtonOnClick (0);
+		//
+		if (Input.GetKeyDown(KeyCode.Escape)) {
+			//
+			OpenCloseMenu ();
 		}
-
-		if (Input.GetKeyDown(action2)) {
-			ActionButtonOnClick (1);
-		}
-
-		if (Input.GetKeyDown(action3)) {
-			ActionButtonOnClick (2);
-		}
-	}
-
-
-	//
-	private void ActionButtonOnClick (int buttonIndex) {
-		// 
-		actionButtons[buttonIndex].onClick.Invoke();
-
 	}
 
 
@@ -95,5 +89,40 @@ public class UIDirector : MonoBehaviour {
 	public void UpdateTargetFrame (float health) {
 		//
 		targetFrameHealth.MyCurrentValue = health;
+	}
+
+	//
+	public void OpenCloseMenu (){
+		//
+		keybindMenu.alpha = keybindMenu.alpha > 0 ? 0 : 1;
+		//
+		keybindMenu.blocksRaycasts = keybindMenu.blocksRaycasts == true ? false : true;
+		//
+		Time.timeScale = Time.timeScale > 0 ? 0 : 1;
+	}
+
+
+	//
+	public void UpdateKeyText(string key, KeyCode code) {
+		//
+		Text tmp = Array.Find(keybindButtons, x => x.name == key).GetComponentInChildren<Text>();
+		//
+		tmp.text = code.ToString();
+	}
+
+
+	// 
+	public void ClickActionButton (string buttonName) {
+		//
+		Array.Find (actionButtons, x => x.gameObject.name == buttonName).GetButton.onClick.Invoke();
+	}
+
+
+	//
+	public void SetUseable (ActionButton button, IUseable useable) {
+		// 
+		button.GetButton.image.sprite = useable.GetIcon;
+		button.GetButton.image.color = Color.white;
+		//button.GetUseable = useable;
 	}
 }
