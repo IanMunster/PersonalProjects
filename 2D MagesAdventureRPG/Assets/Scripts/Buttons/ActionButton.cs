@@ -8,8 +8,9 @@ using UnityEngine.UI;
 
 public class ActionButton : MonoBehaviour, IPointerClickHandler {
 
+
 	//
-	private IUseable useable;
+	public IUseable GetUseable {get; set;}
 	//
 	public Button GetButton { get; private set;}
 
@@ -29,9 +30,9 @@ public class ActionButton : MonoBehaviour, IPointerClickHandler {
 
 	public void OnClick (){
 		//
-		if (useable != null) {
+		if (GetUseable != null) {
 			//
-			useable.Use ();
+			GetUseable.Use ();
 		}
 	}
 

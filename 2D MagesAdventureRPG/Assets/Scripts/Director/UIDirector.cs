@@ -51,7 +51,9 @@ public class UIDirector : MonoBehaviour {
 		targetFramePortrait = targetFrame.transform.GetChild(0).GetChild(1).GetComponent<Image>();
 
 		//
-		SetUseable (actionButtons[0],SpellBook.GetInstance.GetSpell("Fireball") );
+		SetUseable (actionButtons[0], SpellBook.GetInstance.GetSpell("FireBolt") );
+		SetUseable (actionButtons[1], SpellBook.GetInstance.GetSpell("FrostBolt") );
+		SetUseable (actionButtons[2], SpellBook.GetInstance.GetSpell("ShockBolt") );
 	}
 	
 	// Update is called once per frame
@@ -121,8 +123,8 @@ public class UIDirector : MonoBehaviour {
 	//
 	public void SetUseable (ActionButton button, IUseable useable) {
 		// 
-		button.GetButton.image.sprite = useable.GetIcon;
+//		button.GetButton.image.sprite = useable.GetIcon;
 		button.GetButton.image.color = Color.white;
-		//button.GetUseable = useable;
+		button.GetUseable = useable;
 	}
 }
